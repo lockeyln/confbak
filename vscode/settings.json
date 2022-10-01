@@ -1,0 +1,65 @@
+{
+  "workbench.colorTheme": "Default Dark+",
+  "files.autoSave": "afterDelay",
+  "workbench.iconTheme": "vscode-icons",
+  "editor.fontFamily": "JetBrainsMono Nerd Font",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 16,
+  "editor.fontWeight": "normal",
+
+  // "code-runner.runInTerminal": true,
+  "code-runner.executorMap": {
+    "python": "set PYTHONIOENCODING=utf8 && python"
+  },
+
+  "tabnine.experimentalAutoImports": true,
+  "python.defaultInterpreterPath": "C:\\Users\\nrnr\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+  "editor.language.brackets": [],
+
+  // vim配置
+  "vim.autoSwitchInputMethod.enable": true,
+  "vim.autoSwitchInputMethod.defaultIM": "1033",
+  "vim.autoSwitchInputMethod.obtainIMCmd": "D:\\im-select\\im-select.exe",
+  "vim.autoSwitchInputMethod.switchIMCmd": "D:\\im-select\\im-select.exe {im}",
+
+  "vim.leader": "<space>",
+  "vim.hlsearch": true,
+  "vim.easymotion": true,
+  "editor.lineNumbers": "relative",
+  "vim.useSystemClipboard": true,
+  "vim.commandLineModeKeyBindingsNonRecursive": [],
+  "vim.operatorPendingModeKeyBindings": [],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["S"],
+      "commands": [":w"]
+    },
+    {
+      "before": ["Q"],
+      "commands": [":q"]
+    },
+    {
+      "before": ["L"],
+      "after": ["$"]
+    },
+    {
+      "before": ["H"],
+      "after": ["^"]
+    }
+  ],
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false,
+    "<C-n>": false
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.codeActionsOnSave": {}
+}
