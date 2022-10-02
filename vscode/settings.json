@@ -7,10 +7,7 @@
   "editor.fontSize": 16,
   "editor.fontWeight": "normal",
 
-  // "code-runner.runInTerminal": true,
-  "code-runner.executorMap": {
-    "python": "set PYTHONIOENCODING=utf8 && python"
-  },
+  
   
   // python 设置
   "python.formatting.provider": "yapf",
@@ -20,6 +17,10 @@
   "tabnine.experimentalAutoImports": true,
   "python.defaultInterpreterPath": "C:\\Users\\nrnr\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
   "editor.language.brackets": [],
+  // "code-runner.runInTerminal": true,
+  "code-runner.executorMap": {
+    "python": "set PYTHONIOENCODING=utf8 && python"
+  },
 
   // vim配置
   "vim.autoSwitchInputMethod.enable": true,
