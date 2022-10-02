@@ -5,9 +5,7 @@
   "editor.fontFamily": "JetBrainsMono Nerd Font",
   "editor.fontLigatures": true,
   "editor.fontSize": 16,
-  "editor.fontWeight": "normal",
-
-  
+  "editor.fontWeight": "normal", 
   
   // python 设置
   "python.formatting.provider": "yapf",
