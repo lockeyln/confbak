@@ -16,3 +16,46 @@
 1. [RIME安装包下载](https://rime.im/download/)  
 2. [输入方案下载](https://github.com/rime)
 3. [rime_pro增强包下载](https://pan.baidu.com/s/1jI1a8eE)
+
+
+### 安装仅以Windows平台小鹤双拼方案为例
+
+1. 按照上文1下载安装包，跟随安装向导完成安装。在用户资料夹页面，下方空白处选择使用默认位置。  
+    (默认位置在windows的个人文件夹~\AppData\Roaming\Rime，也可以选择我来指定位置，在下方空白框内填入你指定的文件夹的绝对路径。下文所称用户资料夹，均指这个文件夹）。  
+    
+    ![](https://upload-images.jianshu.io/upload_images/850975-eb908e955d0c1676.png?imageMogr2/auto-orient/strip|imageView2/2/w/356/format/webp)
+
+2. 按照上文2下载所需的输入方案，全拼用户可略过此步。
+
+    - 在开始菜单，点击【小狼毫】输入法设定，点击获取更多输入方案，打开rime package installer 命令行界面。  
+
+    ![](https://upload-images.jianshu.io/upload_images/850975-b60c23d16181c050.png?imageMogr2/auto-orient/strip|imageView2/2/w/492/format/webp)  
+    
+    - 将上文2下载的输入方案拖入该窗口，回车完成安装。(若第一步选择了指定文件夹，需从默认文件夹将输入方案拷贝粘贴至你指定的文件夹内)。  
+    
+    ![](https://upload-images.jianshu.io/upload_images/850975-529eef252235488f.png?imageMogr2/auto-orient/strip|imageView2/2/w/978/format/webp)  
+    
+    - 重新打开【小狼毫】输入法设定，在左侧方案名称内勾选所需使用的方案，小鹤双拼。  
+
+    - 点击中进入下一步【小狼毫】界面风格设定，选取喜欢的界面风格。不喜欢没关系，后面会给一个微软拼音同款自定界面。  
+
+3. 到此步，Rime小狼毫输入法已经基本可用了。当然，我们并不会满足于此，下面进入定制阶段。
+
+
+### 如何定制RIME
+
+- 上文3 Rime_pro增强包就是一份全面的配置。
+
+**需要事前了解的常识**
+
+- Rime的各种配置，均是由.yaml文件所定义。yaml是一种标记语言。.yaml文件实际上是文本文档。可使用记事本、或Emeditor等进行编辑。
+
+- 对Rime进行自定义，是通过对.custom.yaml文件修改达成。不同的.custom.yaml文件，控制不同的功能实现。 .custom.yaml实际上是相当于对.yaml文件打补丁，在重新部署后，会将.custom.yaml中的内容写入.yaml文件中，完成自定。  
+
+    - 例一：weasel.yaml是常规设置，主要控制托盘图标、候选词横竖排列、界面配色等等功能。那么，我们需要定制界面配色，只需在weasel.custom.yaml中修改，重新部署后就可实现。
+
+    - 例二：default.yaml是默认设置，主要控制快捷键、按键上屏等等。同样，作修改就编辑default.custom.yaml文件即可。  
+
+    - 例三：以上是全局设置，亦即不论使用何种输入方案，均起作用。double_pinyin_flypy.custom.yaml这种则是输入法方案设置。主要实现特殊标点符号、词库等功能。是针对特定输入方案  的配置。  
+
+- 我们绝大部分的自定，都只需修改对应的.custom.yaml文件即可。
