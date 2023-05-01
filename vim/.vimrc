@@ -16,7 +16,6 @@ set wildmenu "输入命令的时候Tab显示提示
 set nocursorline "不高亮显示当前行
 set termguicolors
 set t_Co=256
-set term=screen-256color
 
 set tabstop=4
 set shiftwidth=4
