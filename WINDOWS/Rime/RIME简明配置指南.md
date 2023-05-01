@@ -74,46 +74,115 @@
 
 3. 现在，来配置小鹤双拼方案。将如下代码，复制黏贴进入double_pinyin_flypy.custom.yaml文件。
 
-```
-patch:
+    ```
+    patch:
 
-  # 載入朙月拼音擴充詞庫
-  "translator/dictionary": luna_pinyin.extended
+      # 載入朙月拼音擴充詞庫
+      "translator/dictionary": luna_pinyin.extended
 
-  # 输入双拼码的时候不转化为全拼码
-  translator/preedit_format: {}
+      # 输入双拼码的时候不转化为全拼码
+      translator/preedit_format: {}
 
-  #载入custom_phrase自定义短语
-  engine/translators:
-      - punct_translator
-      - reverse_lookup_translator
-      - script_translator
-      - table_translator@custom_phrase #表示调用custom_phrase段编码
-      - table_translator
-  custom_phrase:
-    dictionary: ""
-    user_dict: custom_phrase
-    db_class: stabledb
-    enable_completion: false
-    enable_sentence: false
-    initial_quality: 1
+      #载入custom_phrase自定义短语
+      engine/translators:
+          - punct_translator
+          - reverse_lookup_translator
+          - script_translator
+          - table_translator@custom_phrase #表示调用custom_phrase段编码
+          - table_translator
+      custom_phrase:
+        dictionary: ""
+        user_dict: custom_phrase
+        db_class: stabledb
+        enable_completion: false
+        enable_sentence: false
+        initial_quality: 1
 
-  #  符号快速输入和部分符号的快速上屏
-  punctuator:
-    import_preset: symbols
-    half_shape:
-  #      "#": "#"
-      '`': ["·","`"]
-  #      "~": "~"
-  #      "@": "@"
-  #      "=": "="
-  #      "!": "!"
-  #      "/": ["/", "÷"]
-      '\': "、"
-  #      "'": {pair: ["「", "」"]}
-  #      "[": ["【", "["]
-  #      "]": ["】", "]"]
-  #      "$": ["¥", "$", "€", "£", "¢", "¤"]
-  #      "<": ["《", "〈", "«", "<"]
-  #      ">": ["》", "〉", "»", ">"]
-  ```
+      #  符号快速输入和部分符号的快速上屏
+      punctuator:
+        import_preset: symbols
+        half_shape:
+      #      "#": "#"
+          '`': ["·","`"]
+      #      "~": "~"
+      #      "@": "@"
+      #      "=": "="
+      #      "!": "!"
+      #      "/": ["/", "÷"]
+          '\': "、"
+      #      "'": {pair: ["「", "」"]}
+      #      "[": ["【", "["]
+      #      "]": ["】", "]"]
+      #      "$": ["¥", "$", "€", "£", "¢", "¤"]
+      #      "<": ["《", "〈", "«", "<"]
+      #      ">": ["》", "〉", "»", ">"]
+    ```
+  
+    这些代码的含义，已经有详细注释说明了。如不需要某项自定义，将其注释掉就可禁用了。 如果需要某些自定义，可以找到相关教程，添加相应的代码段即可。  
+  
+    **注意**
+  
+    - 该文档只有最开头需要一句patch:，从其他教程拷贝的自定义代码段，请注意不要再次带入patch:  
+
+    - 该文档有严格的缩进要求，请注意按照格式缩进。  
+
+4. 现在，来配置扩展词库。打开luna_pinyin.extended.dict.yaml文件。找到如下代码段。  
+
+    ```
+        ---
+        name: luna_pinyin.extended
+        version: "2014.10.28"
+        sort: by_weight
+        use_preset_vocabulary: true
+        #此處爲明月拼音擴充詞庫（基本）默認鏈接載入的詞庫，有朙月拼音官方詞庫、明月拼音擴充詞庫（漢語大詞典）、明月拼音擴充詞庫（詩詞）、明月拼音擴充詞庫（含西文的詞彙）。如果不需要加載某个詞庫請將其用「#」註釋掉。
+        #雙拼不支持 luna_pinyin.cn_en 詞庫，請用戶手動禁用。
+        import_tables:
+          - luna_pinyin
+        #- luna_pinyin.cn_en
+          - luna_pinyin.computer
+        #- luna_pinyin.emoji
+          - luna_pinyin.hanyu
+        #- luna_pinyin.kaomoji
+          - luna_pinyin.movie
+          - luna_pinyin.music
+          - luna_pinyin.name
+          - luna_pinyin.poetry
+          - luna_pinyin.sgmain
+          - luna_pinyin.i
+        #
+          - f_myphrases
+          - f_mysecretphrases
+        ... 
+    ```  
+    
+    将luna_pinyin.cn_en禁用。禁用的方式很简单，在相应代码行前加上#将其注释掉即可。  
+    当然，全拼用户请跳过这步。这些词库，大家根据需要禁用或启用。这里禁用了两个emoji词库。  
+    
+5. 现在，来配置自定义短语。在文件夹中，新建文本文档，更名为：Custom_phrase.txt。复制如下代码段到这个文档。  
+
+    ```
+    # Rime table
+    # coding: utf-8
+    #@/db_name custom_phrase.txt
+    #@/db_type tabledb
+    #
+    # 用於【朙月拼音】系列輸入方案
+    # 【小狼毫】0.9.21 以上
+    #
+    # 請將該文件以UTF-8編碼保存爲
+    # Rime用戶文件夾/custom_phrase.txt
+    #
+    # 碼表各字段以製表符（Tab）分隔
+    # 順序爲：文字、編碼、權重（決定重碼的次序、可選）
+    #
+    # 雖然文本碼表編輯較爲方便，但不適合導入大量條目
+    #
+    # no comment
+    xxx@gmail.com   gmail   1
+    ```  
+    
+    以第一条gmail为例，根据文字、編碼、權重的先后顺序，按照每行一条的格式，输入你的自定义短语。注意，各个字段之间以制表符（tab）分隔，不是空格！  
+    
+6. 最后，在开始菜单【小狼毫】重新部署即可。
+    
+    
