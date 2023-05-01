@@ -248,3 +248,70 @@ patch:
   ![](https://upload-images.jianshu.io/upload_images/850975-23a20a94306a0309.png?imageMogr2/auto-orient/strip|imageView2/2/w/669/format/webp)
   
 - 开始您的自由输入之旅吧。  
+
+
+### 如何同步个人词典和配置方案
+
+Rime没有云同步功能，但有本地同步功能，我们可以借助坚果云、onedrive等第三方云实现个人词典和配置方案在不同电脑间的同步和备份。以坚果云举例：  
+
+1. 在你的坚果云同步文件夹内，这里举例为'D:\Nutstore‘，新建一个RimeSync文件夹。其他第三方同步云请自行同理修改。  
+
+2. 先打开用户资料夹，打开installation.yaml文件，在最下方添加如下代码：
+
+```
+sync_dir: 'D:\Nutstore\RimeSync'
+```
+
+其中，installation_id后的一长串字段，可以自行修改为喜欢的名称。这里举例为XNOM。
+最后完成的样子如下：
+
+```
+distribution_code_name: Weasel
+distribution_name: "小狼毫"
+distribution_version: 0.14.3
+install_time: "Wed Jul 10 15:57:26 2019"
+installation_id: "XNOM"
+rime_version: 1.5.3
+sync_dir: 'D:\Nutstore\RimeSync'
+```  
+3. 在开始菜单找到【小狼毫】用户资料同步，(也可以点击托盘图标，选择用户资料同步)，完成后，你就能在RimeSync文件夹中找到XNOM文件夹，其中的内容就是你的个人词典文件和配置文件。  
+
+4. 以后若在另外的电脑上使用Rime，则按照相同的步骤，将RimeSync的内容同步即可。
+
+**关于同步功能的注意**
+
+Rime的同步功能，在个人词典是双向同步，在个人配置是单项同步。怎么理解呢？
+
+- 个人词典双向同步，举例来说，甲电脑个人词典累积了词汇ABC，乙电脑累积了词汇DEF，那么，通过第三方云同步和Rime同步后，个人词典词汇会双向同步合并为ABCDEF。
+
+- 配置单向同步，是指将配置文件，单向地从「用户文件夹」同步进入「同步文件夹」。这也是为了保持配置的一致性的必须方案。因为，若这两个文件夹中的配置不一致时，必然产生混乱。因而必须由用户手动。  
+
+- 所以，上述的第四步，是将云端同步好的个人词典文件同步，而个人配置文件，需要你手动复制粘贴进入「用户资料夹」。  
+
+### 一些没能实现的功能
+
+在Rime，利用反斜杆可以实现输入特殊符号、颜文字等等强大功能。例如：输入/xl，能输出希腊字母。  
+
+  ![](https://upload-images.jianshu.io/upload_images/850975-0cc8ec7e30f41eaf.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/204/format/webp)  
+  
+输入/wz，能输出常用网址  
+  
+  ![](https://upload-images.jianshu.io/upload_images/850975-6e13249379c1abe2.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/206/format/webp)  
+  
+这个功能，用家可以选用明月拼音方案进行体验。但在双拼方案中，似乎无法实现码表的对应，以至于该功能缺失。目前我还没有找到好的方法能够在双拼方案中实现反斜杠特殊符号功能。  
+
+### 参考资料及扩展阅读
+
+1. [参考资料及扩展阅读：](https://rime.im/docs/)
+  
+2. [鼠须管输入法傻瓜配置 基于rime_pro](https://segmentfault.com/a/1190000005754706)    
+
+3. [致第一次安装RIME的你](https://www.zybuluo.com/eternity/note/81763)
+
+4. [Rime自定义符号](https://blog.csdn.net/u013410771/article/details/79422576)
+
+5. [推荐一个神级输入法RIME](https://byvoid.com/zhs/blog/recommend-rime/)
+
+6. [一位匠人的中州韵——专访Rime输入法作者佛振](https://segmentfault.com/a/1190000002424698)
+
+7. [最新版 Rime 输入法使用](https://jdhao.github.io/2019/02/18/rime_configuration_intro/)
