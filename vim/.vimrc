@@ -29,16 +29,16 @@ set showcmd "在状态栏显示正在输入的命令
 " let g:tokyonight_enable_italic = 1
 " colorscheme tokyonight  
 "colorscheme molokai
-"colorscheme onedark 
+colorscheme desert 
 
 
 " 设置leader键，设置为空格键
 let mapleader=" "
 nnoremap <leader>ev :e $MYVIMRC<cr> " 打开我的配置文件
 
-"-------------------------------------------------------------------------------
+"--------------------------------------------------------------
 " window
-"-------------------------------------------------------------------------------
+"--------------------------------------------------------------
 " Split window
 nmap ss :split<Return><C-w>w
 nmap vs :vsplit<Return><C-w>w
@@ -120,9 +120,9 @@ nmap <C-a> gg<S-v>G
 nnoremap + <C-a>
 nnoremap - <C-x>
 
-"-------------------------------------------------------------------------------
+"------------------------------------------------------------
 " Buffers
-"-------------------------------------------------------------------------------
+"------------------------------------------------------------
 " Open current directory
 "nmap te :tabedit
 "nmap <S-Tab> :tabprev<Return>
