@@ -119,55 +119,7 @@ nmap <C-a> gg<S-v>G
 " 加/减数字1
 nnoremap + <C-a>
 nnoremap - <C-x>
-"-------------------------------------------------------------------------------
-" Buffers
-"-------------------------------------------------------------------------------
-" Open current directory
-" 插入模式移动光标
-inoremap <C-h> <Left>
-inoremap <C-j> <Down>
-inoremap <C-k> <Up>
-inoremap <C-l> <Right>
-inoremap <C-d> <Delete>
-" hh在我用的单词里出现的频率极低，其实感觉home用的没有end多，统一风格都用大写的吧
-"inoremap HH <Home>
-" 单词中包含ll的太多了，所以用大写LL
-"inoremap LL <End>
-" jk <Esc>
-inoremap jk <Esc>
-" 插入模式鼠标滚轮抵消,不然会出现滚动鼠标录入了一堆5j5k
-inoremap 5k <Esc>
-inoremap 5j <Esc>
-inoremap 9<CR> <Esc>a
-" 快速跳转行首与行尾  
-nnoremap L $
-nnoremap H ^
-" 向下5行
-noremap <C-j> 5j
-" 向上5行
-noremap <C-k> 5k
-" 保存
-noremap <C-s> :w<CR>
-" Coc智能处理，使用IDEA Alt+Enter 同样按键
-noremap <M-Enter> :CocAction<CR>
-inoremap <C-s> <ESC> :w<CR>
-" 代码格式化
-"noremap <leader>f :Format<CR> 
 
-" 强制退出
-map Q :q<CR>
-" 重新加载设置
-map R :source $MYVIMRC<CR>
-"自动关闭标签
-inoremap <buffer> <C-v> <esc>yiwi<lt><esc>ea></><esc>hpF>i
-set iskeyword+=<,>
-iab <h1> <lt>h1> <lt>/h1><esc>5ha
-
-" 全选
-nmap <C-a> gg<S-v>G
-" 加/减数字1
-nnoremap + <C-a>
-nnoremap - <C-x>
 "-------------------------------------------------------------------------------
 " Buffers
 "-------------------------------------------------------------------------------
