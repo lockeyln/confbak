@@ -185,4 +185,66 @@
     
 6. 最后，在开始菜单【小狼毫】重新部署即可。
     
+ ### 配置Rime皮肤  
+ 
+1. 打开weasel.custom.yaml文件，若没有，则新建。  
+
+2. 复制如下代码段到该文件。  
+
+  ```
+  customization:
+  distribution_code_name: Weasel
+  distribution_version: 0.14.3
+  generator: "Weasel::UIStyleSettings"
+  modified_time: "Thu Jun 27 17:32:21 2019"
+  rime_version: 1.5.3
+
+patch:
+  "style/display_tray_icon": true
+  "style/horizontal": true #横排显示
+  "style/font_face": "Microsoft YaHei" #字体
+  "style/font_point": 13 #字体大小
+  "style/inline_preedit": true # 嵌入式候选窗单行显示
+
+
+  "style/layout/border_width": 0
+  "style/layout/border": 0
+  "style/layout/margin_x": 12 #候选字左右边距
+  "style/layout/margin_y": 12 #候选字上下边距
+  "style/layout/hilite_padding": 12 #候选字背景色色块高度 若想候选字背景色块无边界填充候选框，仅需其高度和候选字上下边距一致即可
+  "style/layout/hilite_spacing": 3 # 序号和候选字之间的间隔
+  "style/layout/spacing": 10 #作用不明
+  "style/layout/candidate_spacing": 24 # 候选字间隔
+  "style/layout/round_corner": 0 #候选字背景色块圆角幅度
+
+
+  "style/color_scheme": Micosoft
+  "preset_color_schemes/Micosoft":
+    name: "Micosoft"
+    author: "XNOM"
+    back_color: 0xffffff #候选框 背景色
+    border_color: 0xD77800 #候选框 边框颜色
+    text_color: 0x000000 #已选择字 文字颜色
+    hilited_text_color: 0x000000 #已选择字右侧拼音 文字颜色
+    hilited_back_color: 0xffffff #已选择字右侧拼音 背景色
+    hilited_candidate_text_color: 0xffffff #候选字颜色
+    hilited_candidate_back_color: 0xD77800 #候选字背景色
+    candidate_text_color: 0x000000 #未候选字颜色  
     
+  ```  
+    
+3. 重新部署，查看效果。该配色方案是近乎完全还原win10微软输入法皮肤。
+  
+  ![](https://upload-images.jianshu.io/upload_images/850975-20d1a75edae7245f.png?imageMogr2/auto-orient/strip|imageView2/2/w/549/format/webp)  
+  
+### 使用RIME
+
+到此，RIME基本配置完毕。如果更多定制化要求，请自行搜寻相关教程。  
+
+- 切换为RIME输入法后，按下Ctrl+`或F4快捷键，调出方案选单，第一次选择：选择所需方案，第二次选择：选择简体或繁体、半角或全角、中文或英文、中文标点或英文标点输出，即可开始使用。  
+
+  ![](https://upload-images.jianshu.io/upload_images/850975-06d0a75c26ee4e96.png?imageMogr2/auto-orient/strip|imageView2/2/w/396/format/webp)
+  
+  ![](https://upload-images.jianshu.io/upload_images/850975-23a20a94306a0309.png?imageMogr2/auto-orient/strip|imageView2/2/w/669/format/webp)
+  
+- 开始您的自由输入之旅吧。  
