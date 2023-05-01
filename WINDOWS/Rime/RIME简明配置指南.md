@@ -59,3 +59,61 @@
     - 例三：以上是全局设置，亦即不论使用何种输入方案，均起作用。double_pinyin_flypy.custom.yaml这种则是输入法方案设置。主要实现特殊标点符号、词库等功能。是针对特定输入方案  的配置。  
 
 - 我们绝大部分的自定，都只需修改对应的.custom.yaml文件即可。
+
+- 所有自定修改，都必须重新部署。在开始菜单可以找到【小狼毫】重新部署。
+
+    - 在开始菜单可以找到【小狼毫】重新部署。  
+
+    - 右键托盘图标重新部署。  
+
+#### 开始配置Rime  
+
+1. 解压Rime_pro软件增强包，并把里面的文件拷贝到 ~/Rime （此处是上文所述指定用户资料夹），覆盖即可。  
+
+2. 请注意，该增强包在最新版小狼毫不能很好地支持小鹤双拼方案，故而，需首先将double_pinyin_flypy.custom.yaml文件中的内容清空。  
+
+3. 现在，来配置小鹤双拼方案。将如下代码，复制黏贴进入double_pinyin_flypy.custom.yaml文件。
+
+```
+patch:
+
+  # 載入朙月拼音擴充詞庫
+  "translator/dictionary": luna_pinyin.extended
+
+  # 输入双拼码的时候不转化为全拼码
+  translator/preedit_format: {}
+
+  #载入custom_phrase自定义短语
+  engine/translators:
+      - punct_translator
+      - reverse_lookup_translator
+      - script_translator
+      - table_translator@custom_phrase #表示调用custom_phrase段编码
+      - table_translator
+  custom_phrase:
+    dictionary: ""
+    user_dict: custom_phrase
+    db_class: stabledb
+    enable_completion: false
+    enable_sentence: false
+    initial_quality: 1
+
+  #  符号快速输入和部分符号的快速上屏
+  punctuator:
+    import_preset: symbols
+    half_shape:
+  #      "#": "#"
+      '`': ["·","`"]
+  #      "~": "~"
+  #      "@": "@"
+  #      "=": "="
+  #      "!": "!"
+  #      "/": ["/", "÷"]
+      '\': "、"
+  #      "'": {pair: ["「", "」"]}
+  #      "[": ["【", "["]
+  #      "]": ["】", "]"]
+  #      "$": ["¥", "$", "€", "£", "¢", "¤"]
+  #      "<": ["《", "〈", "«", "<"]
+  #      ">": ["》", "〉", "»", ">"]
+  ```
