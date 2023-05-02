@@ -4,6 +4,10 @@
     - 全平台兼容：windows、mac、linux，甚至安卓都有衍生（[同文安卓输入法平台](https://github.com/osfans/trime)）  
     - 众多可选方案：包括小鹤、微软在内的双拼方案，还能实现小鹤双拼形码辅助；注音、五笔、仓颉……以及自定方案。  
     - 标点自定、模糊音、词语联想、个人词库，基本囊括常规输入工具的功能。
+    - 支持多平台一套配置，Linux和macOS以及Windows一次性统一。
+    - 支持自定义字库（比如：古汉语大全、新华成语大全和现在计算机名词解释等），还可以实现拆字、颜文字和Emoji表情等。
+    - 支持Lua语法插件（比如：输入date，可以打印今天的日期）。
+    - 无需联网，保证个人隐私不通过输入法流入大数据。
 
 - 高门槛
     - 无图形界面，自定全靠代码。
@@ -126,7 +130,7 @@
 
     - 该文档有严格的缩进要求，请注意按照格式缩进。  
 
-4. 现在，来配置扩展词库。打开luna_pinyin.extended.dict.yaml文件。找到如下代码段。  
+4. 现在，来配置扩展词库。打开luna_pinyin.extended.dict.yaml文件。找到如下代码段。   
 
     ```
         ---
@@ -315,3 +319,5 @@ Rime的同步功能，在个人词典是双向同步，在个人配置是单项�
 6. [一位匠人的中州韵——专访Rime输入法作者佛振](https://segmentfault.com/a/1190000002424698)
 
 7. [最新版 Rime 输入法使用](https://jdhao.github.io/2019/02/18/rime_configuration_intro/)
+
+8.[oh-my-rime](https://github.com/Mintimate/oh-my-rime) 
