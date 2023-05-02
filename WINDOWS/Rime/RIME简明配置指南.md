@@ -302,7 +302,7 @@ Rime的同步功能，在个人词典是双向同步，在个人配置是单项�
 
 ### 参考资料及扩展阅读
 
-1. [参考资料及扩展阅读：](https://rime.im/docs/)
+1. [RIME帮助文档](https://rime.im/docs/)
   
 2. [鼠须管输入法傻瓜配置 基于rime_pro](https://segmentfault.com/a/1190000005754706)    
 
