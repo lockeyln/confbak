@@ -321,3 +321,5 @@ Rime的同步功能，在个人词典是双向同步，在个人配置是单项�
 7. [最新版 Rime 输入法使用](https://jdhao.github.io/2019/02/18/rime_configuration_intro/)
 
 8. [oh-my-rime](https://github.com/Mintimate/oh-my-rime) 
+
+9. [打造跨平台rime定制指南](https://www.mintimate.cn/2023/03/18/rimeQuickInit/)
