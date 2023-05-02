@@ -50,6 +50,24 @@
 
 - 上文3 Rime_pro增强包就是一份全面的配置。
 
+**不同操作系统默认配置文件夹的地址**  
+
+  - Linux上默认配置文件地址：~/.config/ibus/rime/
+  - macOS上默认配置文件地址：~/Library/Rime/
+  - Windows上默认配置文件地址： %APPDATA%\Rime
+
+  部分操作系统，可以更改默认配置文件夹的地址；比如Windows：
+  
+- 默认的配置文件主要有
+
+| 文件 | 说明 |
+|  ----  | ----  |
+| default.custom.yaml | 核心配置、全局配置 |
+| squirrel.custom.yaml / weasel.custom.yaml / ibus_rime.yaml | 平台相关配置。样式皮肤，不同软件默认输入法状态等。 |
+| <方案标识>.custom.yaml | 输入方案的定制配置 |
+| <名称>.dict.yaml | 词典 |
+| custom_phrase.txt | 自定义短语 |
+
 **需要事前了解的常识**
 
 - Rime的各种配置，均是由.yaml文件所定义。yaml是一种标记语言。.yaml文件实际上是文本文档。可使用记事本、或Emeditor等进行编辑。
