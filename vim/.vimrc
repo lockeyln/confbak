@@ -26,10 +26,7 @@ set smartindent
 set ruler "显示当前行号列号
 set showcmd "在状态栏显示正在输入的命令
 
-" let g:tokyonight_style = 'night' " available: night, storm
-" let g:tokyonight_enable_italic = 1
-" colorscheme tokyonight  
-"colorscheme molokai
+
 colorscheme desert 
 
 
