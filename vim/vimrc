@@ -502,7 +502,11 @@ set guitabtooltip=%{Vim_NeatGuiTabTip()}
 
 " 设置leader键，设置为空格键
 let mapleader=" "
-nnoremap <leader>ev :e $MYVIMRC<cr> " 打开我的配置文件
+
+" 打开我的配置文件
+nnoremap <leader>ev :e $MYVIMRC<cr> 
+" 重新加载设置
+map R :source $MYVIMRC<CR>
 
 "--------------------------------------------------------------
 " window
@@ -575,8 +579,7 @@ noremap <leader>f :Format<CR>
 " 强制退出
 map Q :q<CR>
 "map qq :q<CR>
-" 重新加载设置
-map R :source $MYVIMRC<CR>
+
 "自动关闭标签
 inoremap <buffer> <C-v> <esc>yiwi<lt><esc>ea></><esc>hpF>i
 set iskeyword+=<,>
