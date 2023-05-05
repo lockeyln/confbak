@@ -622,7 +622,6 @@ endif
 "----------------------------------------------------------------------
 " <leader>+数字键 切换tab
 "----------------------------------------------------------------------
-noremap <silent><leader>1 1gt<cr>
 noremap <silent><leader>2 2gt<cr>
 noremap <silent><leader>3 3gt<cr>
 noremap <silent><leader>4 4gt<cr>
@@ -663,6 +662,10 @@ inoremap <silent><m-0> <ESC>:tabn 10<cr>
 "--------------------------------------------------------------
 nmap ss :split<Return><C-w>w
 nmap vs :vsplit<Return><C-w>w
+nnoremap <up> :res +5<CR>
+nnoremap <down> :res -5<CR>
+nnoremap <left> :vertical resize-5<CR>
+nnoremap <right> :vertical resize+5<CR>
 
 
 "自动关闭标签
@@ -719,3 +722,22 @@ inoremap <TAB> <c-r>=SkipPair()<CR>
 
 " 任务结束时候响铃提醒
 let g:asyncrun_bell = 1
+
+
+"--------------------------------------------------------------
+" VIM自带文件浏览器netrw
+"--------------------------------------------------------------
+"设置是否显示横幅
+let g:netrw_banner = 0
+"设置目录列表的样式：树形
+let g:netrw_liststyle = 3
+ 
+"在之前的窗口编辑文件，类似按下大写 P
+let g:netrw_browse_split = 4
+"水平分割时，文件浏览器始终显示在左边
+let g:netrw_altv = 1
+ 
+"设置文件浏览器窗口宽度为 25%
+let g:netrw_winsize = 25
+
+nnoremap <leader>1 :Explore<cr>
