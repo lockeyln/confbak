@@ -733,11 +733,11 @@ let g:netrw_banner = 0
 let g:netrw_liststyle = 3
  
 "在之前的窗口编辑文件，类似按下大写 P
-let g:netrw_browse_split = 4
+let g:netrw_browse_split = 3
 "水平分割时，文件浏览器始终显示在左边
 let g:netrw_altv = 1
  
 "设置文件浏览器窗口宽度为 25%
 let g:netrw_winsize = 25
 
-nnoremap <leader>1 :Explore<cr>
+nnoremap <leader>1 :Vexplore<cr>
