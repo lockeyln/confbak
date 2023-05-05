@@ -508,60 +508,10 @@ nnoremap <leader>ev :e $MYVIMRC<cr>
 " 重新加载设置
 map R :source $MYVIMRC<CR>
 
-"--------------------------------------------------------------
-" window
-"--------------------------------------------------------------
-" Split window
-nmap ss :split<Return><C-w>w
-nmap vs :vsplit<Return><C-w>w
-" Move window
-"nmap <Space> <C-w>w
-"map s<left> <C-w>h
-"map s<up> <C-w>k
-"map s<down> <C-w>j
-"map s<right> <C-w>l
-" map sh <C-w>h
-" map sk <C-w>k
-" map sj <C-w>j
-" map sl <C-w>l
 
-" Resize window
-" 在mac/linux中使用Alt键，在webssh
-" 中alt没用，就使用Ctrl,WEBSSH主要的WINDOWS中使用
-"nmap <M-left> <C-w><
-"nmap <C-left> <C-w><
-"nmap s<left> <C-w><
-
-"nmap <M-right> <C-w>>
-"nmap <C-right> <C-w>>
-"nmap s<right> <C-w>>
-
-"nmap <M-up> <C-w>+
-"nmap <C-up> <C-w>+
-"nmap s<up> <C-w>+
-
-"nmap <M-down> <C-w>-
-"nmap <C-down> <C-w>-
-"nmap s<down> <C-w>-
-
-" 插入模式移动光标
-inoremap <C-h> <Left>
-inoremap <C-j> <Down>
-inoremap <C-k> <Up>
-inoremap <C-l> <Right>
-inoremap <C-d> <Delete>
-
-" 其实感觉home用的没有end多，统一风格都用大写的
-"inoremap HH <Home>
-inoremap <c-a> <home>
-" 单词中包含ll的太多了，所以用大写LL
-"inoremap LL <End>
-inoremap <c-e> <end>
-" jk <Esc>
-inoremap jk <Esc>
-" 插入模式鼠标滚轮抵消,不然会出现滚动鼠标录入了一堆5j5k
-inoremap 5k <Esc>
-inoremap 5j <Esc>
+"----------------------------------------------------------------------
+" NORMAL模式的快速移动
+"----------------------------------------------------------------------
 
 " 快速跳转行首与行尾  
 nnoremap L $
@@ -577,6 +527,47 @@ inoremap <C-s> <ESC> :w<CR>
 " 强制退出
 map Q :q<CR>
 "map qq :q<CR>
+
+
+"----------------------------------------------------------------------
+" 设置 CTRL+HJKL 移动光标（INSERT 模式偶尔需要移动的方便些）
+" 使用 SecureCRT/XShell 等终端软件需设置：Backspace sends delete
+" 详见：http://www.skywind.me/blog/archives/2021
+"----------------------------------------------------------------------
+inoremap <C-h> <Left>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-l> <Right>
+inoremap <c-a> <Home>
+inoremap <c-e> <End>
+inoremap <C-d> <Delete>
+
+inoremap jk <Esc>
+" 插入模式鼠标滚轮抵消,不然会出现滚动鼠标录入了一堆5j5k
+inoremap 5k <Esc>
+inoremap 5j <Esc>
+
+"----------------------------------------------------------------------
+" 命令模式的快速移动
+"----------------------------------------------------------------------
+cnoremap <c-h> <left>
+cnoremap <c-j> <down>
+cnoremap <c-k> <up>
+cnoremap <c-l> <right>
+cnoremap <c-a> <home>
+cnoremap <c-e> <end>
+cnoremap <c-f> <c-d>
+cnoremap <c-b> <left>
+cnoremap <c-d> <del>
+cnoremap <c-_> <c-k>
+
+"--------------------------------------------------------------
+" window
+"--------------------------------------------------------------
+" Split window
+nmap ss :split<Return><C-w>w
+nmap vs :vsplit<Return><C-w>w
+
 
 "自动关闭标签
 inoremap <buffer> <C-v> <esc>yiwi<lt><esc>ea></><esc>hpF>i
