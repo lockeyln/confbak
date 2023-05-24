@@ -1,3 +1,7 @@
+# 导入主题
+import:
+  - ~/.config/alacritty/dracula.yml
+
 # 实时预览配置项
 live_config_reload: true
 
