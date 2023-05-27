@@ -1,11 +1,11 @@
-# 实时预览# 导入主题
-import:
-  - ~/.config/alacritty/dracula.yml配置项
+# 导入主题
+# import:
+#   - ~/.config/alacritty/dracula.yml
 
+# 实时预览配置项
 live_config_reload: true
 
 # 环境变量
-
 env:
   TERM: alacritty
 
