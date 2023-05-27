@@ -153,6 +153,8 @@ key_bindings:
   - { key: T, mods: Control|Alt, action: SpawnNewInstance }
   # 最小化
   - { key: M, mods: Control|Alt, action: Minimize }
+  # 最大化
+  - { key: N, mods: Control|Alt, action: ToggleFullscreen }
   # 清空选择
   - { key: Backslash, mods: Control|Alt, action: ClearSelection }
   # 开启 vi 模式
