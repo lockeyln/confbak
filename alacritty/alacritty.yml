@@ -1,6 +1,6 @@
 # 导入主题
-# import:
-#   - ~/.config/alacritty/dracula.yml
+import:
+  - ~/.config/alacritty/themes/themes/challenger_deep.yaml
 
 # 实时预览配置项
 live_config_reload: true
