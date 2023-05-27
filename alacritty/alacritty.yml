@@ -1,13 +1,13 @@
-# 导入主题
+# 实时预览# 导入主题
 import:
-  - ~/.config/alacritty/dracula.yml
+  - ~/.config/alacritty/dracula.yml配置项
 
-# 实时预览配置项
 live_config_reload: true
 
 # 环境变量
+
 env:
-  TERM: xterm-256color
+  TERM: alacritty
 
 # 窗口设置
 window:
@@ -18,9 +18,9 @@ window:
   dynamic_title: true
 
   # 窗口大小
-  # dimensions:
-    # columns: 120
-    # lines: 40
+  dimensions:
+    columns: 80
+    lines: 20
 
   # 窗口内边距
   padding:
@@ -48,22 +48,21 @@ window:
 # 滚动设置
 scrolling:
   # 回滚缓冲区最大保存行数
-  history: 10000 # 一次回滚几行
+  history: 10000
+
+  # 一次回滚几行
   multiplier: 3
 
 # 字体设置
 font:
   # 常规字体
   normal:
-    # family: "FiraCode Nerd Font Mono"
-    # family: "FiraCode Nerd Font"
+    family: "FiraCode Nerd Font Mono"
     # family: "agave Nerd Font Mono"
-    family: "Hack Nerd Font"
     style: Regular
 
   # 字大小
-  size: 14
-  
+  size: 14.0
 
   # 字符间距
   offset:
@@ -71,7 +70,7 @@ font:
     y: 2
 
   # 细体字渲染（仅 mac 生效）
-  use_thin_strokes: true
+  # use_thin_strokes: true
 
   # 高亮渲染粗体字
   draw_bold_text_with_bright_colors: true
@@ -106,7 +105,7 @@ mouse:
   hide_when_typing: true
 
 # 主题设置
-# Catppuccin
+# Catppuccin!
 colors:
   # Default colors
   primary:
@@ -139,50 +138,10 @@ colors:
     magenta: "0xF5C2E7"
     cyan: "0x89DCEB"
     white: "0xD9E0EE"
-    
-  dim:
-    black:   "#1e2127"
-    red:     "#e06c75"
-    green:   "#98c379"
-    yellow:  "#d19a66"
-    blue:    "#61afef"
-    magenta: "#c678dd"
-    cyan:    "#56b6c2"
-    white:   "#828791"
 
   indexed_colors:
     - { index: 16, color: "0xF8BD96" }
     - { index: 17, color: "0xF5E0DC" }
-
-# vscode dark
-# colors:
-#   primary:
-#     background: '#1e1e1e'
-#     foreground: '#d4d4d4'
-#
-#   cursor:
-#     text: "0x1E1D2F"
-#     cursor: '#d4d4d4'
-#
-#   normal:
-#     black:   '#1e1e1e'
-#     red:     '#f44747'
-#     green:   '#608b4e'
-#     yellow:  '#dcdcaa'
-#     blue:    '#569cd6'
-#     magenta: '#c678dd'
-#     cyan:    '#56b6c2'
-#     white:   '#d4d4d4'
-#
-#   bright:
-#     black:   '#545454'
-#     red:     '#f44747'
-#     green:   '#608b4e'
-#     yellow:  '#dcdcaa'
-#     blue:    '#569cd6'
-#     magenta: '#c678dd'
-#     cyan:    '#56b6c2'
-#     white:   '#d4d4d4'
 
 # 键绑定
 key_bindings:
