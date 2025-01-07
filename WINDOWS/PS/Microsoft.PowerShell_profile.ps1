@@ -1,6 +1,14 @@
 Import-Module posh-git # 引入 posh-git
 Import-Module oh-my-posh # 引入 oh-my-posh
 Import-Module -Name Terminal-Icons  # 引入文件图标库
+
+Import-Module PSReadLine
+Set-PSReadLineOption -EditMode Emacs
+Set-PSReadLineOption -PredictionSource HistoryAndPlugin
+Set-PSReadLineOption -PredictionViewStyle ListView
+Set-PSReadLineOption -BellStyle None
+Set-PSReadLineKeyHandler -Chord 'Ctrl+d' -Function DeleteChar
+
 # 设置主题
 oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/robbyrussell.omp.json"  |  Invoke-Expression
  
