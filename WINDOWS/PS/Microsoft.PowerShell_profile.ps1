@@ -2,7 +2,7 @@ Import-Module posh-git # 引入 posh-git
 Import-Module oh-my-posh # 引入 oh-my-posh
 Import-Module -Name Terminal-Icons  # 引入文件图标库
 # 设置主题
-oh-my-posh init pwsh --config "C:\Users\nrnr\AppData\Local\Programs\oh-my-posh\themes\robbyrussell.omp.json"  |  Invoke-Expression
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/robbyrussell.omp.json"  |  Invoke-Expression
  
 # Set-PSReadLineOption -PredictionSource History # 设置预测文本来源为历史记录
 Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete # 设置 Tab 键，命令行自动补全和提示
