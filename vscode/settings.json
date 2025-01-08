@@ -37,6 +37,17 @@
 
   "window.density.editorTabHeight": "compact",
   "window.dialogStyle": "custom",
+  
+  // neovim路径
+  "vscode-neovim.neovimExecutablePaths.win32": "D:\\Program Files\\Neovim\\bin\\nvim.exe",
+  // neovim配置文件路径
+  "vscode-neovim.neovimInitVimPaths.win32": "C:\\Users\\nrnr\\AppData\\Local\\nvim\\init.lua",
+  // neovim组合键
+  "vscode-neovim.compositeKeys": {
+    "jj": {
+      "command": "vscode-neovim.escape"
+    },
+  },
 
   // python设置
   // "code-runner.runInTerminal": true,
@@ -46,6 +57,25 @@
   "tabnine.experimentalAutoImports": true,
   "python.defaultInterpreterPath": "C:\\Users\\nrnr\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
   "editor.language.brackets": [],
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.codeActionsOnSave": {},
+  "settingsSync.ignoredExtensions": [
+    "ms-toolsai.jupyter",
+    "ms-toolsai.vscode-jupyter-cell-tags",
+    "ms-toolsai.jupyter-keymap"
+  ],
+
+  "vsicons.dontShowNewVersionMessage": true,
+  "workbench.colorTheme": "Monokai Dimmed",
+
 
   // vim配置
   "vim.autoSwitchInputMethod.enable": true,
@@ -53,9 +83,6 @@
   "vim.autoSwitchInputMethod.obtainIMCmd": "D:\\im-select\\im-select.exe",
   "vim.autoSwitchInputMethod.switchIMCmd": "D:\\im-select\\im-select.exe {im}",
 
-  "vim.leader": "<space>",
-  "vim.hlsearch": true,
-  "vim.easymotion": true,
   "editor.lineNumbers": "relative",
   "vim.useSystemClipboard": true,
   "vim.commandLineModeKeyBindingsNonRecursive": [],
@@ -89,21 +116,4 @@
     "<C-f>": false,
     "<C-n>": false
   },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "editor.codeActionsOnSave": {},
-  "settingsSync.ignoredExtensions": [
-    "ms-toolsai.jupyter",
-    "ms-toolsai.vscode-jupyter-cell-tags",
-    "ms-toolsai.jupyter-keymap"
-  ],
-  "[python]": {
-    "editor.formatOnType": true
-  },
-  "extensions.experimental.affinity": {
-    "asvetliakov.vscode-neovim": 1
-  },
-  "vsicons.dontShowNewVersionMessage": true,
-  "workbench.colorTheme": "Monokai Dimmed"
 }
