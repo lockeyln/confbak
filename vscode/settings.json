@@ -1,24 +1,51 @@
 {
-  "workbench.colorTheme": "Default Dark+",
   "files.autoSave": "afterDelay",
-  "workbench.iconTheme": "vscode-icons",
-  "editor.fontFamily": "JetBrainsMono Nerd Font",
+  "workbench.iconTheme": "moxer-icons",
+  "editor.fontFamily": "Geist Mono",
   "editor.fontLigatures": true,
   "editor.fontSize": 16,
-  "editor.fontWeight": "normal", 
+  "editor.fontWeight": "normal",
+  "editor.smoothScrolling": true,
+  "editor.cursorBlinking": "expand",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "workbench.list.smoothScrolling": true,
+  "editor.mouseWheelZoom": true,
+  "editor.guides.bracketPairs": true,
+  "editor.bracketPairColorization.enabled": true,
+  // 控制活动代码段是否阻止快速建议
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  // 除了 `Tab` 键以外， `Enter` 键是否同样可以接受建议
+  // 这能减少“插入新行”和“接受建议”命令之间的歧义
+  "editor.acceptSuggestionOnEnter": "smart",
+  // 代码补全列表中，优先选择最近的建议
+  "editor.suggestSelection": "recentlyUsedByPrefix",
+  "editor.suggest.insertMode": "replace",
+  "editor.autoClosingBrackets": "beforeWhitespace",
+  "editor.autoClosingDelete": "always",
+  "editor.autoClosingOvertype": "always",
+  "editor.autoClosingQuotes": "beforeWhitespace",
+  "editor.wordWrap": "on",
+  "editor.lineHeight": 1.5,
+  // 文件夹紧凑模式
+  "explorer.compactFolders": true,
+  "notebook.compactView": true,
   
-  // python 设置
-  "python.formatting.provider": "yapf",
-  "python.linting.flake8Args": ["--max-line-length=248"],
-  "python.linting.pylintEnabled": false,
-  "python.linting.flake8Enabled": true
-  "tabnine.experimentalAutoImports": true,
-  "python.defaultInterpreterPath": "C:\\Users\\nrnr\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
-  "editor.language.brackets": [],
+  "files.autoGuessEncoding": true,
+  "search.searchEditor.singleClickBehaviour": "peekDefinition",
+  "terminal.integrated.shellIntegration.suggestEnabled": true,
+  "terminal.integrated.stickyScroll.enabled": true,
+
+  "window.density.editorTabHeight": "compact",
+  "window.dialogStyle": "custom",
+
+  // python设置
   // "code-runner.runInTerminal": true,
   "code-runner.executorMap": {
     "python": "set PYTHONIOENCODING=utf8 && python"
   },
+  "tabnine.experimentalAutoImports": true,
+  "python.defaultInterpreterPath": "C:\\Users\\nrnr\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+  "editor.language.brackets": [],
 
   // vim配置
   "vim.autoSwitchInputMethod.enable": true,
@@ -65,5 +92,18 @@
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.codeActionsOnSave": {}
+  "editor.codeActionsOnSave": {},
+  "settingsSync.ignoredExtensions": [
+    "ms-toolsai.jupyter",
+    "ms-toolsai.vscode-jupyter-cell-tags",
+    "ms-toolsai.jupyter-keymap"
+  ],
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "vsicons.dontShowNewVersionMessage": true,
+  "workbench.colorTheme": "Monokai Dimmed"
 }
