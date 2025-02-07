@@ -1,9 +1,8 @@
 {
-  "files.autoSave": "afterDelay",
-  "workbench.iconTheme": "moxer-icons",
-  "editor.fontFamily": "Geist Mono",
+  "workbench.colorTheme": "Everforest Dark",
+  "editor.fontFamily": "FiraCode",
   "editor.fontLigatures": true,
-  "editor.fontSize": 16,
+  "editor.fontSize": 18,
   "editor.fontWeight": "normal",
   "editor.smoothScrolling": true,
   "editor.cursorBlinking": "expand",
@@ -12,12 +11,8 @@
   "editor.mouseWheelZoom": true,
   "editor.guides.bracketPairs": true,
   "editor.bracketPairColorization.enabled": true,
-  // 控制活动代码段是否阻止快速建议
   "editor.suggest.snippetsPreventQuickSuggestions": false,
-  // 除了 `Tab` 键以外， `Enter` 键是否同样可以接受建议
-  // 这能减少“插入新行”和“接受建议”命令之间的歧义
   "editor.acceptSuggestionOnEnter": "smart",
-  // 代码补全列表中，优先选择最近的建议
   "editor.suggestSelection": "recentlyUsedByPrefix",
   "editor.suggest.insertMode": "replace",
   "editor.autoClosingBrackets": "beforeWhitespace",
@@ -26,18 +21,18 @@
   "editor.autoClosingQuotes": "beforeWhitespace",
   "editor.wordWrap": "on",
   "editor.lineHeight": 1.5,
-  // 文件夹紧凑模式
   "explorer.compactFolders": true,
   "notebook.compactView": true,
-  
+
+  // 默认 lf 结尾
+  "files.eol": "\n",
   "files.autoGuessEncoding": true,
   "search.searchEditor.singleClickBehaviour": "peekDefinition",
-  "terminal.integrated.shellIntegration.suggestEnabled": true,
   "terminal.integrated.stickyScroll.enabled": true,
 
   "window.density.editorTabHeight": "compact",
   "window.dialogStyle": "custom",
-  
+
   // neovim路径
   "vscode-neovim.neovimExecutablePaths.win32": "D:\\Program Files\\Neovim\\bin\\nvim.exe",
   // neovim配置文件路径
@@ -46,15 +41,14 @@
   "vscode-neovim.compositeKeys": {
     "jj": {
       "command": "vscode-neovim.escape"
-    },
+    }
   },
-
   // python设置
   // "code-runner.runInTerminal": true,
   "code-runner.executorMap": {
-    "python": "set PYTHONIOENCODING=utf8 && python"
+    "python": "set PYTHONIOENCODING=utf8 && python",
+    "lua":"D:\\lua-5.4.2\\lua54.exe",
   },
-  "tabnine.experimentalAutoImports": true,
   "python.defaultInterpreterPath": "C:\\Users\\nrnr\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
   "editor.language.brackets": [],
   "[python]": {
@@ -74,46 +68,22 @@
   ],
 
   "vsicons.dontShowNewVersionMessage": true,
-  "workbench.colorTheme": "Monokai Dimmed",
 
-
-  // vim配置
-  "vim.autoSwitchInputMethod.enable": true,
-  "vim.autoSwitchInputMethod.defaultIM": "1033",
-  "vim.autoSwitchInputMethod.obtainIMCmd": "D:\\im-select\\im-select.exe",
-  "vim.autoSwitchInputMethod.switchIMCmd": "D:\\im-select\\im-select.exe {im}",
 
   "editor.lineNumbers": "relative",
-  "vim.useSystemClipboard": true,
-  "vim.commandLineModeKeyBindingsNonRecursive": [],
-  "vim.operatorPendingModeKeyBindings": [],
-  "vim.normalModeKeyBindingsNonRecursive": [
-    {
-      "before": ["S"],
-      "commands": [":w"]
+  "vscode-neovim.highlightGroups.highlights": {
+    "IncSearch": {
+      "backgroundColor": "theme.editor.findMatchBackground"
     },
-    {
-      "before": ["Q"],
-      "commands": [":q"]
+    "CurSearch": {
+      "backgroundColor": "theme.editor.findMatchBackground"
     },
-    {
-      "before": ["L"],
-      "after": ["$"]
+    "Search": {
+      "backgroundColor": "theme.editor.findMatchHighlightBackground"
     },
-    {
-      "before": ["H"],
-      "after": ["^"]
+    "Substitute": {
+      "backgroundColor": "theme.editor.foreground",
+      "color": "theme.editor.background"
     }
-  ],
-  "vim.insertModeKeyBindings": [
-    {
-      "before": ["j", "j"],
-      "after": ["<Esc>"]
-    }
-  ],
-  "vim.handleKeys": {
-    "<C-a>": false,
-    "<C-f>": false,
-    "<C-n>": false
-  },
+  }
 }
