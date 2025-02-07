@@ -9,19 +9,10 @@
   "editor.cursorSmoothCaretAnimation": "on",
   "workbench.list.smoothScrolling": true,
   "editor.mouseWheelZoom": true,
-  "editor.lineNumbers": "relative",
-  "editor.guides.bracketPairs": true,
   "editor.bracketPairColorization.enabled": true,
-  "editor.suggest.snippetsPreventQuickSuggestions": false,
-  "editor.acceptSuggestionOnEnter": "smart",
-  "editor.suggestSelection": "recentlyUsedByPrefix",
-  "editor.suggest.insertMode": "replace",
-  "editor.autoClosingBrackets": "beforeWhitespace",
-  "editor.autoClosingDelete": "always",
-  "editor.autoClosingOvertype": "always",
-  "editor.autoClosingQuotes": "beforeWhitespace",
   "editor.wordWrap": "on",
   "editor.lineHeight": 1.5,
+  "editor.lineNumbers": "relative",
   "explorer.compactFolders": true,
   "notebook.compactView": true,
 
@@ -44,47 +35,12 @@
       "command": "vscode-neovim.escape"
     }
   },
-  // python设置
-  // "code-runner.runInTerminal": true,
+
   "code-runner.executorMap": {
-    "python": "set PYTHONIOENCODING=utf8 && python",
     "lua":"D:\\lua-5.4.2\\lua54.exe",
-  },
-  "python.defaultInterpreterPath": "C:\\Users\\nrnr\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
-  "editor.language.brackets": [],
-  "[python]": {
-    "editor.formatOnType": true
   },
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
   },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "editor.codeActionsOnSave": {},
-  "settingsSync.ignoredExtensions": [
-    "ms-toolsai.jupyter",
-    "ms-toolsai.vscode-jupyter-cell-tags",
-    "ms-toolsai.jupyter-keymap"
-  ],
 
-  "vsicons.dontShowNewVersionMessage": true,
-
-
-  
-  "vscode-neovim.highlightGroups.highlights": {
-    "IncSearch": {
-      "backgroundColor": "theme.editor.findMatchBackground"
-    },
-    "CurSearch": {
-      "backgroundColor": "theme.editor.findMatchBackground"
-    },
-    "Search": {
-      "backgroundColor": "theme.editor.findMatchHighlightBackground"
-    },
-    "Substitute": {
-      "backgroundColor": "theme.editor.foreground",
-      "color": "theme.editor.background"
-    }
-  }
 }
