@@ -28,7 +28,7 @@
   "editor.formatOnPaste": false,
   "editor.formatOnType": true,
   // neovim路径
-  "vscode-neovim.neovimExecutablePaths.win32": "D:\\Program Files\\Neovim\\bin\\nvim.exe",
+  "vscode-neovim.neovimExecutablePaths.win32": "D:\\Neovim\\bin\\nvim.exe",
   // neovim配置文件路径
   "vscode-neovim.neovimInitVimPaths.win32": "C:\\Users\\nrnr\\AppData\\Local\\nvim\\init.lua",
   // neovim组合键
