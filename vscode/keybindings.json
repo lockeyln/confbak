@@ -1,4 +1,4 @@
-// 将键绑定放在此文件中以覆盖默认值
+// 将键绑定放在此配置文件中以覆盖默认值
 [
     {
       "key": "alt+h",
@@ -15,6 +15,14 @@
     {
       "key": "alt+l",
       "command": "cursorRight"
+    },
+    {
+    "key":"shift+h",
+    "command":"cursorHome",
+    },
+    {
+    "key":"shift+l",
+    "command":"cursorEnd",
     },
     {
     "key": "alt+shift+f",
