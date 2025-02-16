@@ -1,5 +1,8 @@
 {
   "workbench.colorTheme": "Everforest Dark",
+  "workbench.colorCustomizations": {
+    "editorRuler.foreground": "#ff4081"
+  },
   "editor.fontFamily": "FiraCode",
   "editor.fontLigatures": true,
   "editor.fontSize": 18,
@@ -10,9 +13,12 @@
   "workbench.list.smoothScrolling": true,
   "editor.mouseWheelZoom": true,
   "editor.bracketPairColorization.enabled": true,
-  "editor.wordWrap": "on",
+  "editor.wordWrap": "off",
   "editor.lineHeight": 1.5,
   "editor.lineNumbers": "relative",
+  "editor.rulers": [
+    80,
+  ],
   "explorer.compactFolders": true,
   "notebook.compactView": true,
   "window.density.editorTabHeight": "compact",
@@ -46,7 +52,7 @@
   "[python]": {
     "editor.insertSpaces": true,
     "editor.tabSize": 4,
-    "files.autoGuessEncoding": true
+    "files.autoGuessEncoding": true,
   },
   "[javascript]": {
     "editor.tabSize": 2,
@@ -56,12 +62,73 @@
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "editor.inlayHints.enabled": "off",
+  "diffEditor.wordWrap": "off",
+  "editor.guides.indentation": false,
+  "editor.guides.bracketPairs": false,
+}{
+  "workbench.colorTheme": "Everforest Dark",
   "workbench.colorCustomizations": {
-    "editor.lineHighlightBackground": "#1073cf2d",
-    "editor.lineHighlightBorder": "#9fced11f",
-    "editorCursor.foreground": "#FF0000",
-    "terminalCursor.foreground": "#FF0000"
+    "editorRuler.foreground": "#ff4081"
   },
+  "editor.fontFamily": "FiraCode",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 18,
+  "editor.fontWeight": "normal",
+  "editor.smoothScrolling": true,
+  "editor.cursorBlinking": "expand",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "workbench.list.smoothScrolling": true,
+  "editor.mouseWheelZoom": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.wordWrap": "off",
+  "editor.lineHeight": 1.5,
+  "editor.lineNumbers": "relative",
+  "editor.rulers": [
+    80,
+  ],
+  "explorer.compactFolders": true,
+  "notebook.compactView": true,
+  "window.density.editorTabHeight": "compact",
+  "window.dialogStyle": "custom",
+  // 默认LF结尾,在 Windows 中默认使用的是 CRLF（回车符和换行符）来换行，而在 Linux 和 macOS 中则使用的是 LF（换行符）。
+  "files.eol": "\n",
+  "files.autoGuessEncoding": true,
+  "search.searchEditor.singleClickBehaviour": "peekDefinition",
+  "terminal.integrated.stickyScroll.enabled": true,
+  // code snippet
+  "editor.suggestSelection": "recentlyUsedByPrefix",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": false,
+  "editor.formatOnType": true,
+  // neovim路径
+  "vscode-neovim.neovimExecutablePaths.win32": "D:\\Neovim\\bin\\nvim.exe",
+  // neovim配置文件路径
+  "vscode-neovim.neovimInitVimPaths.win32": "C:\\Users\\nrnr\\AppData\\Local\\nvim\\init.lua",
+  // neovim组合键
+  "vscode-neovim.compositeKeys": {
+    "jj": {
+      "command": "vscode-neovim.escape"
+    }
+  },
+  "code-runner.executorMap": {
+    "lua": "D:\\lua-5.4.2\\lua54.exe"
+  },
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "[python]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "files.autoGuessEncoding": true,
+  },
+  "[javascript]": {
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "editor.inlayHints.enabled": "off",
   "diffEditor.wordWrap": "off",
   "editor.guides.indentation": false,
   "editor.guides.bracketPairs": false,
