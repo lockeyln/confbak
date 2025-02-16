@@ -60,10 +60,9 @@ noremap <C-k> 5k
 inoremap <M-h> <Left>
 inoremap <M-j> <Down>
 inoremap <M-k> <Up>
-inoremap <M-l> <Right>
+inoremap <M-l> <Right> 
 
-" 格式化(规范化)文本，即对选定的文本进行换行或重排，适应指定的文本宽度
-" 全文规范化：Ctrl+Alt+l
+" 格式化(规范化)代码，idea默认格式化代码快捷键：Ctrl+Alt+l
 map Q gq
 
 " 跳转到下一个错误或警告
