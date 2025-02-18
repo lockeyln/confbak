@@ -63,8 +63,6 @@ nnoremap H ^
 noremap <C-j> 5j
 noremap <C-k> 5k
 
-
-
 " 格式化(规范化)代码，idea默认格式化代码快捷键：Ctrl+Alt+l
 nmap Q gq
 
