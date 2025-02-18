@@ -236,7 +236,7 @@ nmap <leader>l :action NextTab<CR>
 
 
 "========== m ==========
-"打开/关闭 代码小地图
+"打开/关闭 代码小地图，默认ctrl+shift+G
 let g:WhichKeyDesc_CodeGlance = "<leader>m CodeGlance"
 nmap <leader>m <action>(CodeGlance.toggle)
 
