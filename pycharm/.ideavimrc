@@ -63,7 +63,7 @@ inoremap <M-k> <Up>
 inoremap <M-l> <Right> 
 
 " 格式化(规范化)代码，idea默认格式化代码快捷键：Ctrl+Alt+l
-map Q gq
+nmap Q gq
 
 " 跳转到下一个错误或警告
 nmap ge <action>(GotoNextError)
