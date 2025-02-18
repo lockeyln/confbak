@@ -311,6 +311,20 @@ vmap <leader>t <action>($EditorTranslateAction)
 "========== w ==========
 """"   包含自定义宏，可能无法使用   """"
 let g:WhichKeyDesc_Windows = "<leader>w Windows"
+let g:WhichKeyDesc_Windows_Move = "<leader>wm 移动窗口"
+
+"向右拆分标签页
+let g:WhichKeyDesc_Windows_Move_MoveTabRight = "<leader>wml 向右拆分标签页"
+nmap <leader>wml <action>(MoveTabRight)
+"向下拆分标签页
+let g:WhichKeyDesc_Windows_Move_MoveTabDown = "<leader>wmd 向下拆分标签页"
+nmap <leader>wmd <action>(MoveTabDown)
+"在另一边打开（前提是有另一边的分割窗口）
+let g:WhichKeyDesc_Windows_Move_MoveEditorToOppositeTabGroup = "<leader>wmo 在另一边打开"
+nmap <leader>wmo <action>(MoveEditorToOppositeTabGroup)
+"向右复制标签页
+let g:WhichKeyDesc_Windows_Move_SplitVertically = "<leader>wmc 向右复制标签页"
+nmap <leader>wmc <action>(SplitVertically)
 
 "取消分割窗口 并 隐藏所有编辑器窗口
 let g:WhichKeyDesc_Windows_maximize = "<leader>wo maximize"
@@ -323,6 +337,10 @@ let g:WhichKeyDesc_Windows_closeActiveWindow = "<leader>wc closeActiveWindow"
 nmap <leader>wc <c-w>c
 let g:WhichKeyDesc_Windows_HideActiveWindow = "<leader>wh HideActiveWindow"
 nmap <leader>wh <Alt-6>
+
+"隐藏/显示窗口
+let g:WhichKeyDesc_Windows_Hide_HideActiveWindow = "<leader>ww 隐藏/显示活动窗口"
+nmap <leader>ww <action>(HideAllWindows)
 
 
 "========== y ==========
@@ -389,7 +407,7 @@ nmap s <Plug>(easymotion-s2)
 let g:WhichKeyDesc_easymotion = "s 快速跳转"
 
 " ================================================================================================
-" 🌞🌞🌞 目录-食用手册 🌞🌞🌞
+" 🌞🌞🌞 查找手册 🌞🌞🌞
 " ================================================================================================
 
 "===================================== A =====================================
