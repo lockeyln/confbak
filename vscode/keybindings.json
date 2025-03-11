@@ -25,10 +25,6 @@
     "command":"cursorEnd",
     },
     {
-    "key": "alt+shift+f",
-    "command": "editor.action.formatDocument",
-    },
-    {
       "key": "ctrl+a",
       "command": "-vscode-neovim.send",
       "when": "editorTextFocus && neovim.ctrlKeysInsert.a && neovim.init && neovim.mode == 'insert' && editorLangId not in 'neovim.editorLangIdExclusions'"
