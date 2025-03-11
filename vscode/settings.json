@@ -58,6 +58,8 @@
     "editor.insertSpaces": true,
     "editor.tabSize": 4,
     "files.autoGuessEncoding": true,
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true,
   },
   "[javascript]": {
     "editor.tabSize": 2,
@@ -82,4 +84,92 @@
   "python.analysis.inlayHints.callArgumentNames": "partial",
   "python.analysis.inlayHints.functionReturnTypes": true,
   "python.analysis.typeCheckingMode": "standard",
+  "workbench.activityBar.location": "top",
+}{
+  "files.autoSave": "afterDelay",
+  "files.autoGuessEncoding": true,
+  // 默认LF结尾,在 Windows 中默认使用的是 CRLF（回车符和换行符）来换行，而在 Linux 和 macOS 中则使用的是 LF（换行符）。
+  "files.eol": "\n",
+  "workbench.colorTheme": "Everforest Dark",
+  "workbench.colorCustomizations": {
+    "editorRuler.foreground": "#ff4081"
+  },
+  "editor.fontFamily": "FiraCode,'微软雅黑',monospace",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 15,
+  "editor.fontWeight": "normal",
+  "editor.wordWrap": "on",
+  "editor.lineHeight": 1.5,
+  "editor.lineNumbers": "relative",
+  // "editor.rulers": [80],
+  "editor.smoothScrolling": true,
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "workbench.list.smoothScrolling": true,
+  "editor.mouseWheelZoom": true,
+  "editor.bracketPairColorization.enabled": true,
+  "explorer.compactFolders": true,
+  "notebook.compactView": true,
+  "window.density.editorTabHeight": "compact",
+  "window.dialogStyle": "custom",
+  "debug.showBreakpointsInOverviewRuler": true,
+  "search.searchEditor.singleClickBehaviour": "peekDefinition",
+  "terminal.integrated.stickyScroll.enabled": true,
+  // code snippet
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "editor.acceptSuggestionOnEnter": "smart",
+  "editor.suggestSelection": "recentlyUsedByPrefix",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": false,
+  "editor.formatOnType": true,
+  // neovim路径
+  "vscode-neovim.neovimExecutablePaths.win32": "D:\\Neovim\\bin\\nvim.exe",
+  // neovim配置文件路径
+  "vscode-neovim.neovimInitVimPaths.win32": "C:\\Users\\nrnr\\AppData\\Local\\nvim\\init.lua",
+  // neovim组合键
+  "vscode-neovim.compositeKeys": {
+    "jj": {
+      "command": "vscode-neovim.escape"
+    }
+  },
+  "code-runner.executorMap": {
+    "lua": "D:\\lua-5.4.2\\lua54.exe"
+  },
+  "code-runner.runInTerminal": true,
+  "code-runner.saveAllFilesBeforeRun": true,
+  "code-runner.saveFileBeforeRun": true,
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "[python]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "files.autoGuessEncoding": true,
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true,
+  },
+  "[javascript]": {
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "editor.inlayHints.enabled": "off",
+  "diffEditor.wordWrap": "off",
+  "editor.guides.indentation": false,
+  "editor.guides.bracketPairs": false,
+  "workbench.editorAssociations": {
+    "*.copilotmd": "vscode.markdown.preview.editor",
+    "{git,gitlens,git-graph}:/**/*.{md,csv,svg}": "default"
+  },
+  "python.autoComplete.extraPaths": [],
+  "python.analysis.completeFunctionParens": true,
+  "workbench.settings.applyToAllProfiles": [
+    "editor.fontFamily"
+  ],
+  "python.analysis.inlayHints.callArgumentNames": "partial",
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "python.analysis.typeCheckingMode": "standard",
+  "workbench.activityBar.location": "top",
 }
