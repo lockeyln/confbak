@@ -16,7 +16,7 @@
   "workbench.colorCustomizations": {
     "editorRuler.foreground": "#ff4081"
   },
-  "editor.fontFamily": "Fira Code,Sarasa Fixed SC,Maple Mono NF CN",
+  "editor.fontFamily": "Fira Code,'Sarasa Fixed SC',monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 16,
   "editor.fontWeight": "normal",
