@@ -1,15 +1,24 @@
 {
+  "workbench.activityBar.location": "top",
+  "editor.inlayHints.enabled": "off",
+  "diffEditor.wordWrap": "off",
+  "editor.guides.indentation": false,
+  "editor.guides.bracketPairs": false,
+  "workbench.editorAssociations": {
+    "*.copilotmd": "vscode.markdown.preview.editor",
+    "{git,gitlens,git-graph}:/**/*.{md,csv,svg}": "default"
+  },
   "files.autoSave": "afterDelay",
   "files.autoGuessEncoding": true,
   // 默认LF结尾,在 Windows 中默认使用的是 CRLF（回车符和换行符）来换行，而在 Linux 和 macOS 中则使用的是 LF（换行符）。
   "files.eol": "\n",
-  "workbench.colorTheme": "Everforest Dark",
+  "workbench.colorTheme": "One Dark Pro Darker",
   "workbench.colorCustomizations": {
     "editorRuler.foreground": "#ff4081"
   },
-  "editor.fontFamily": "FiraCode,'微软雅黑',monospace",
+  "editor.fontFamily": "Fira Code,'Sarasa Fixed SC',Maple Mono NF CN",
   "editor.fontLigatures": true,
-  "editor.fontSize": 15,
+  "editor.fontSize": 16,
   "editor.fontWeight": "normal",
   "editor.wordWrap": "on",
   "editor.lineHeight": 1.5,
@@ -58,7 +67,12 @@
     "editor.insertSpaces": true,
     "editor.tabSize": 4,
     "files.autoGuessEncoding": true,
-    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.ruff": "explicit",
+      "source.organizeImports.ruff": "explicit",
+    }
   },
   "[javascript]": {
     "editor.tabSize": 2,
@@ -66,14 +80,6 @@
   },
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "editor.inlayHints.enabled": "off",
-  "diffEditor.wordWrap": "off",
-  "editor.guides.indentation": false,
-  "editor.guides.bracketPairs": false,
-  "workbench.editorAssociations": {
-    "*.copilotmd": "vscode.markdown.preview.editor",
-    "{git,gitlens,git-graph}:/**/*.{md,csv,svg}": "default"
   },
   "python.autoComplete.extraPaths": [],
   "python.analysis.completeFunctionParens": true,
@@ -83,8 +89,10 @@
   "python.analysis.inlayHints.callArgumentNames": "partial",
   "python.analysis.inlayHints.functionReturnTypes": true,
   "python.analysis.typeCheckingMode": "standard",
-  "workbench.activityBar.location": "top",
-  "notebook.defaultFormatter": "ms-python.black-formatter",
+  "notebook.defaultFormatter": "charliermarsh.ruff",
   "notebook.formatOnSave.enabled": true,
-  "editor.defaultFormatter": "ms-python.black-formatter",
+  "notebook.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit",
+  }
 }
