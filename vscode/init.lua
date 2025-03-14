@@ -17,7 +17,7 @@ vim.opt.cursorline = true -- highlight cursor line underneath the cursor horizon
 vim.opt.splitbelow = true -- open new vertical split bottom
 vim.opt.splitright = true -- open new horizontal splits right
 -- vim.opt.termguicolors = true        -- enabl 24-bit RGB color in the TUI
-vim.opt.showmode = false -- we are experienced, wo don't need the "-- INSERT --" mode hint
+vim.opt.showmode = true -- we are experienced, wo don't need the "-- INSERT --" mode hint
 
 vim.opt.wrap = false -- Wrapping sucks (except on markdown)
 vim.opt.swapfile = false -- Do not leave any backup files
@@ -40,34 +40,34 @@ vim.g.loaded_netrwPlugin = 1
 
 -- 2.keymaps
 -- define common options
-local opts = {
-    noremap = true, -- non-recursive
-    silent = true -- do not show message
-}
+local keymap = vim.keymap.set
+local opts = {noremap = true, silent = true}
 
-local map = vim.api.nvim_set_keymap
-map("n", "<Space>", "<Nop>", opts)
-
+-- 将 leader 键重新映射
+keymap("n", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
-vim.g.maplocalleader = ","
+vim.g.maplocalleader = " "
 
 -----------------
 -- Normal mode --
 -----------------
 -- 大写 J 和 K 跳转5行
-vim.keymap.set('n', 'J', '5j')
-vim.keymap.set('n', 'K', '5k')
+keymap('n', 'J', '5j')
+keymap('n', 'K', '5k')
 -- 大写 H 和 L 行首和行尾
-vim.keymap.set('n', 'H', '^')
-vim.keymap.set('n', 'L', '$')
+keymap('n', 'H', '^')
+keymap('n', 'L', '$')
 -- 反向撤销
-vim.keymap.set('n', 'U', '<C-r>')
+keymap('n', 'U', '<C-r>')
 -- 清除高亮
-vim.keymap.set('n', '<Esc>', ':nohlsearch<CR>')
+keymap('n', '<Esc>', ':nohlsearch<CR>')
 
 -- vscode 专用设置
 if vim.g.vscode then
     -- VSCode extension
+    -- VSCode 下的 NeoVim  
+    -- 加载 VSCode 键位映射  
 else
     -- ordinary Neovim
+    -- 普通的 Vim环境  
 end
