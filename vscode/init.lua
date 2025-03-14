@@ -2,6 +2,7 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = ","
 
+-- 设置option
 vim.o.clipboard = "unnamedplus"
 vim.o.foldmethod = "manual"
 vim.o.hlsearch = true
