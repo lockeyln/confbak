@@ -1,5 +1,8 @@
 {
   "workbench.activityBar.location": "top",
+  "workbench.settings.applyToAllProfiles": [
+    "editor.fontFamily"
+  ],
   "editor.inlayHints.enabled": "off",
   "diffEditor.wordWrap": "off",
   "editor.guides.indentation": false,
@@ -17,6 +20,7 @@
     "editorRuler.foreground": "#ff4081"
   },
   "editor.fontFamily": "Fira Code,'Sarasa Fixed SC',monospace",
+  "terminal.integrated.fontFamily": "Fira Code,'Sarasa Fixed SC',monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 16,
   "editor.fontWeight": "normal",
@@ -57,14 +61,12 @@
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
   },
-
   "code-runner.executorMap": {
     "lua": "D:\\lua-5.4.2\\lua54.exe"
   },
   "code-runner.runInTerminal": true,
   "code-runner.saveAllFilesBeforeRun": true,
   "code-runner.saveFileBeforeRun": true,
-
   "[lua]": {
     "editor.defaultFormatter": "Koihik.vscode-lua-format"
   },
@@ -81,9 +83,6 @@
   },
   "python.autoComplete.extraPaths": [],
   "python.analysis.completeFunctionParens": true,
-  "workbench.settings.applyToAllProfiles": [
-    "editor.fontFamily"
-  ],
   "python.analysis.inlayHints.callArgumentNames": "partial",
   "python.analysis.inlayHints.functionReturnTypes": true,
   "python.analysis.typeCheckingMode": "standard",
@@ -100,7 +99,6 @@
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
-
   "vscode_custom_css.imports": [
     "file:///c:/Users/nrnr/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js"
   ],
