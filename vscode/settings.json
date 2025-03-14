@@ -56,7 +56,17 @@
   "vscode-neovim.compositeKeys": {
     "jj": {
       "command": "vscode-neovim.escape"
-    }
+    },
+    "jk": {
+      "command": "vscode-neovim.lua",
+      "args": [
+        [
+          "local code = require('vscode')",
+          "code.action('vscode-neovim.escape')",
+          "code.action('workbench.action.files.save')",
+        ],
+      ],
+    },
   },
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
