@@ -54,14 +54,19 @@
       "command": "vscode-neovim.escape"
     }
   },
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+
   "code-runner.executorMap": {
     "lua": "D:\\lua-5.4.2\\lua54.exe"
   },
   "code-runner.runInTerminal": true,
   "code-runner.saveAllFilesBeforeRun": true,
   "code-runner.saveFileBeforeRun": true,
-  "extensions.experimental.affinity": {
-    "asvetliakov.vscode-neovim": 1
+
+  "[lua]": {
+    "editor.defaultFormatter": "Koihik.vscode-lua-format"
   },
   "[python]": {
     "editor.insertSpaces": true,
@@ -73,13 +78,6 @@
       "source.fixAll.ruff": "explicit",
       "source.organizeImports.ruff": "explicit",
     }
-  },
-  "[javascript]": {
-    "editor.tabSize": 2,
-    "editor.formatOnSave": true
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "python.autoComplete.extraPaths": [],
   "python.analysis.completeFunctionParens": true,
@@ -94,5 +92,16 @@
   "notebook.codeActionsOnSave": {
     "source.fixAll": "explicit",
     "source.organizeImports": "explicit",
-  }
+  },
+  "[javascript]": {
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+
+  "vscode_custom_css.imports": [
+    "file:///c:/Users/nrnr/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js"
+  ],
 }
