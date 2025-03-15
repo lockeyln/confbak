@@ -1,4 +1,6 @@
--- 1.options
+-----------------
+--  options  --
+-----------------
 -- Hint: use `:h <option>` to figure out the meaning if needed
 -- 当文件被外部程序修改时，自动加载
 vim.o.autoread = true
@@ -47,7 +49,9 @@ vim.o.foldlevel = 99
 vim.g.loaded_newrw = 1
 vim.g.loaded_netrwPlugin = 1
 
--- 2.keymaps
+-----------------
+--  keymaps  --
+-----------------
 -- define common options
 local keymap = vim.keymap.set
 local opts = {noremap = true, silent = true}
@@ -57,17 +61,12 @@ keymap("n", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = ","
 
------------------
--- Normal mode --
------------------
 -- 大写 J 和 K 跳转5行
 keymap('n', 'J', '5j')
 keymap('n', 'K', '5k')
 -- 大写 H 和 L 行首和行尾
 keymap('n', 'H', '^', opts)
 keymap('n', 'L', '$', opts)
--- 反向撤销
-keymap('n', 'U', '<C-r>')
 -- 清除高亮
 keymap('n', '<Esc>', ':nohlsearch<CR>')
 
