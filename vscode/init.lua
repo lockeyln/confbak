@@ -1,38 +1,54 @@
 -- 1.options
 -- Hint: use `:h <option>` to figure out the meaning if needed
-vim.opt.clipboard = 'unnamedplus' -- use system clipboard
-vim.opt.completeopt = {'menu', 'menuone', 'noselect'}
-vim.opt.mouse = 'a' -- allow the mouse to be used in Nvim
+-- 当文件被外部程序修改时，自动加载
+vim.o.autoread = true
+vim.bo.autoread = true
+
+vim.o.clipboard = 'unnamedplus' -- use system clipboard
+vim.o.mouse = 'a' -- allow the mouse to be used in Nvim
+
+vim.g.encoding = "utf-8" -- Just in case
+vim.o.fileencoding = "utf-8" -- Just in case
+
+-- 自动补全不自动选中
+vim.g.completeopt = "menu,menuone,noselect,noinsert"
 
 -- Searching
-vim.opt.incsearch = true -- search as characters are entered
-vim.opt.hlsearch = true -- do not highlight matches
-vim.opt.ignorecase = true -- ignore case in searches by default
-vim.opt.smartcase = true -- but make it case sensitive if an uppercase is entered
+vim.o.incsearch = true -- search as characters are entered
+vim.o.hlsearch = true -- do not highlight matches
+vim.o.ignorecase = true -- ignore case in searches by default
+vim.o.smartcase = true -- but make it case sensitive if an uppercase is entered
 
 -- UI config
-vim.opt.number = true -- show absolute number
-vim.opt.relativenumber = true -- add numbers to each line on the left side
-vim.opt.cursorline = true -- highlight cursor line underneath the cursor horizontally
-vim.opt.splitbelow = true -- open new vertical split bottom
-vim.opt.splitright = true -- open new horizontal splits right
+vim.o.number = true -- show absolute number
+vim.o.relativenumber = true -- add numbers to each line on the left side
+vim.o.cursorline = true -- highlight cursor line underneath the cursor horizontally
+vim.o.splitbelow = true -- open new vertical split bottom
+vim.o.splitright = true -- open new horizontal splits right
 -- vim.opt.termguicolors = true        -- enabl 24-bit RGB color in the TUI
-vim.opt.showmode = true -- we are experienced, wo don't need the "-- INSERT --" mode hint
+vim.o.showmode = true -- we are experienced, wo don't need the "-- INSERT --" mode hint
 
-vim.opt.wrap = false -- Wrapping sucks (except on markdown)
-vim.opt.swapfile = false -- Do not leave any backup files
-vim.opt.showmatch = true -- Highlights the matching parenthesis
-vim.opt.signcolumn = "yes" -- Always show the signcolumn, otherwise it would shift the text
-vim.opt.hidden = true -- Allow multple buffers
-vim.opt.shortmess:append("c") -- Don't pass messages to |ins-completion-menu|.
-vim.opt.encoding = "utf-8" -- Just in case
-vim.opt.cmdheight = 2 -- Shows better messages
+vim.o.wrap = false -- Wrapping sucks (except on markdown)
+vim.o.swapfile = false -- Do not leave any backup files
+vim.o.showmatch = true -- Highlights the matching parenthesis
+vim.o.signcolumn = "yes" -- Always show the signcolumn, otherwise it would shift the text
+vim.o.hidden = true -- Allow multple buffers
+vim.o.cmdheight = 2 -- Shows better messages
 
-vim.opt.foldmethod = "indent"
-vim.opt.foldlevel = 99
+-- jkhl 移动时光标周围保留8行
+vim.o.scrolloff = 8
+vim.o.sidescrolloff = 8
 
-vim.opt.undofile = true
-vim.opt.undodir = vim.fn.stdpath("data")
+-- 新行对齐当前行
+vim.o.autoindent = true
+vim.bo.autoindent = true
+vim.o.smartindent = true
+
+vim.o.foldmethod = "indent"
+vim.o.foldlevel = 99
+
+vim.o.undofile = true
+vim.o.undodir = vim.fn.stdpath("data")
 
 -- 禁用Neovim的文件管理
 vim.g.loaded_newrw = 1
@@ -46,7 +62,7 @@ local opts = {noremap = true, silent = true}
 -- 将 leader 键重新映射
 keymap("n", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+vim.g.maplocalleader = ","
 
 -----------------
 -- Normal mode --
@@ -55,8 +71,186 @@ vim.g.maplocalleader = " "
 keymap('n', 'J', '5j')
 keymap('n', 'K', '5k')
 -- 大写 H 和 L 行首和行尾
-keymap('n', 'H', '^')
-keymap('n', 'L', '$')
+keymap('n', 'H', '^', opts)
+keymap('n', 'L', '$', opts)
+-- 反向撤销
+keymap('n', 'U', '<C-r>')
+-- 清除高亮
+keymap('n', '<Esc>', ':nohlsearch<CR>')
+
+-- vscode 专用设置
+if vim.g.vscode then
+    -- VSCode extension
+    -- VSCode 下的 NeoVim  
+    -- 加载 VSCode 键位映射  
+else
+    -- ordinary Neovim
+    -- 普通的 Vim环境  
+end
+-- 1.options
+-- Hint: use `:h <option>` to figure out the meaning if needed
+-- 当文件被外部程序修改时，自动加载
+vim.o.autoread = true
+vim.bo.autoread = true
+
+vim.o.clipboard = 'unnamedplus' -- use system clipboard
+vim.o.mouse = 'a' -- allow the mouse to be used in Nvim
+
+vim.g.encoding = "utf-8" -- Just in case
+vim.o.fileencoding = "utf-8" -- Just in case
+
+-- 自动补全不自动选中
+vim.g.completeopt = "menu,menuone,noselect,noinsert"
+
+-- Searching
+vim.o.incsearch = true -- search as characters are entered
+vim.o.hlsearch = true -- do not highlight matches
+vim.o.ignorecase = true -- ignore case in searches by default
+vim.o.smartcase = true -- but make it case sensitive if an uppercase is entered
+
+-- UI config
+vim.o.number = true -- show absolute number
+vim.o.relativenumber = true -- add numbers to each line on the left side
+vim.o.cursorline = true -- highlight cursor line underneath the cursor horizontally
+vim.o.splitbelow = true -- open new vertical split bottom
+vim.o.splitright = true -- open new horizontal splits right
+-- vim.opt.termguicolors = true        -- enabl 24-bit RGB color in the TUI
+vim.o.showmode = true -- we are experienced, wo don't need the "-- INSERT --" mode hint
+
+vim.o.wrap = false -- Wrapping sucks (except on markdown)
+vim.o.swapfile = false -- Do not leave any backup files
+vim.o.showmatch = true -- Highlights the matching parenthesis
+vim.o.signcolumn = "yes" -- Always show the signcolumn, otherwise it would shift the text
+vim.o.hidden = true -- Allow multple buffers
+vim.o.cmdheight = 2 -- Shows better messages
+
+-- jkhl 移动时光标周围保留8行
+vim.o.scrolloff = 8
+vim.o.sidescrolloff = 8
+
+-- 新行对齐当前行
+vim.o.autoindent = true
+vim.bo.autoindent = true
+vim.o.smartindent = true
+
+vim.o.foldmethod = "indent"
+vim.o.foldlevel = 99
+
+vim.o.undofile = true
+vim.o.undodir = vim.fn.stdpath("data")
+
+-- 禁用Neovim的文件管理
+vim.g.loaded_newrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+-- 2.keymaps
+-- define common options
+local keymap = vim.keymap.set
+local opts = {noremap = true, silent = true}
+
+-- 将 leader 键重新映射
+keymap("n", "<Space>", "<Nop>", opts)
+vim.g.mapleader = " "
+vim.g.maplocalleader = ","
+
+-----------------
+-- Normal mode --
+-----------------
+-- 大写 J 和 K 跳转5行
+keymap('n', 'J', '5j')
+keymap('n', 'K', '5k')
+-- 大写 H 和 L 行首和行尾
+keymap('n', 'H', '^', opts)
+keymap('n', 'L', '$', opts)
+-- 反向撤销
+keymap('n', 'U', '<C-r>')
+-- 清除高亮
+keymap('n', '<Esc>', ':nohlsearch<CR>')
+
+-- vscode 专用设置
+if vim.g.vscode then
+    -- VSCode extension
+    -- VSCode 下的 NeoVim  
+    -- 加载 VSCode 键位映射  
+else
+    -- ordinary Neovim
+    -- 普通的 Vim环境  
+end
+-- 1.options
+-- Hint: use `:h <option>` to figure out the meaning if needed
+-- 当文件被外部程序修改时，自动加载
+vim.o.autoread = true
+vim.bo.autoread = true
+
+vim.o.clipboard = 'unnamedplus' -- use system clipboard
+vim.o.mouse = 'a' -- allow the mouse to be used in Nvim
+
+vim.g.encoding = "utf-8" -- Just in case
+vim.o.fileencoding = "utf-8" -- Just in case
+
+-- 自动补全不自动选中
+vim.g.completeopt = "menu,menuone,noselect,noinsert"
+
+-- Searching
+vim.o.incsearch = true -- search as characters are entered
+vim.o.hlsearch = true -- do not highlight matches
+vim.o.ignorecase = true -- ignore case in searches by default
+vim.o.smartcase = true -- but make it case sensitive if an uppercase is entered
+
+-- UI config
+vim.o.number = true -- show absolute number
+vim.o.relativenumber = true -- add numbers to each line on the left side
+vim.o.cursorline = true -- highlight cursor line underneath the cursor horizontally
+vim.o.splitbelow = true -- open new vertical split bottom
+vim.o.splitright = true -- open new horizontal splits right
+-- vim.opt.termguicolors = true        -- enabl 24-bit RGB color in the TUI
+vim.o.showmode = true -- we are experienced, wo don't need the "-- INSERT --" mode hint
+
+vim.o.wrap = false -- Wrapping sucks (except on markdown)
+vim.o.swapfile = false -- Do not leave any backup files
+vim.o.showmatch = true -- Highlights the matching parenthesis
+vim.o.signcolumn = "yes" -- Always show the signcolumn, otherwise it would shift the text
+vim.o.hidden = true -- Allow multple buffers
+vim.o.cmdheight = 2 -- Shows better messages
+
+-- jkhl 移动时光标周围保留8行
+vim.o.scrolloff = 8
+vim.o.sidescrolloff = 8
+
+-- 新行对齐当前行
+vim.o.autoindent = true
+vim.bo.autoindent = true
+vim.o.smartindent = true
+
+vim.o.foldmethod = "indent"
+vim.o.foldlevel = 99
+
+vim.o.undofile = true
+vim.o.undodir = vim.fn.stdpath("data")
+
+-- 禁用Neovim的文件管理
+vim.g.loaded_newrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+-- 2.keymaps
+-- define common options
+local keymap = vim.keymap.set
+local opts = {noremap = true, silent = true}
+
+-- 将 leader 键重新映射
+keymap("n", "<Space>", "<Nop>", opts)
+vim.g.mapleader = " "
+vim.g.maplocalleader = ","
+
+-----------------
+-- Normal mode --
+-----------------
+-- 大写 J 和 K 跳转5行
+keymap('n', 'J', '5j')
+keymap('n', 'K', '5k')
+-- 大写 H 和 L 行首和行尾
+keymap('n', 'H', '^', opts)
+keymap('n', 'L', '$', opts)
 -- 反向撤销
 keymap('n', 'U', '<C-r>')
 -- 清除高亮
