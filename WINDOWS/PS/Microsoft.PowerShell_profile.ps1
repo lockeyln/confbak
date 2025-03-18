@@ -1,4 +1,5 @@
 Invoke-Expression (&starship init powershell)
+# Install-Module -Name Terminal-Icons -Repository PSGallery # 安装文件图标库
 Import-Module -Name Terminal-Icons  # 引入文件图标库
 # 设置预测文本来源为历史记录
 # Set-PSReadLineOption -PredictionSource History 
@@ -14,9 +15,9 @@ if (Test-Path($ChocolateyProfile)) {
     Import-Module "$ChocolateyProfile"
 }
 
-$env:HTTP_PROXY = "http://127.0.0.1:7890"
-$env:HTTPS_PROXY = "http://127.0.0.1:7890"
-$env:NO_PROXY = "localhost,127.0.0.1,::1,192.168.0.0/16"
+# $env:HTTP_PROXY = "http://127.0.0.1:7890"
+# $env:HTTPS_PROXY = "http://127.0.0.1:7890"
+# $env:NO_PROXY = "localhost,127.0.0.1,::1,192.168.0.0/16"
 
 function cdnvim() {
     $nvimDir = "$env:LOCALAPPDATA/nvim"
