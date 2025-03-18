@@ -11,19 +11,20 @@ Set-PSReadlineOption -BellStyle None
 
 $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
 if (Test-Path($ChocolateyProfile)) {
-  Import-Module "$ChocolateyProfile"
+    Import-Module "$ChocolateyProfile"
 }
 
 $env:HTTP_PROXY = "http://127.0.0.1:7890"
 $env:HTTPS_PROXY = "http://127.0.0.1:7890"
 $env:NO_PROXY = "localhost,127.0.0.1,::1,192.168.0.0/16"
 
-function cdnvim()
-{
-  Set-Location $env:LOCALAPPDATA/nvim
+function cdnvim() {
+    $nvimDir = "$env:LOCALAPPDATA/nvim"
+    if (-not (Test-Path $nvimDir)) {
+        New-Item -ItemType Directory -Path $nvimDir
+    }
+    Set-Location $nvimDir
 }
-
-function cdnvimdata()
-{
-  Set-Location $env:LOCALAPPDATA/nvim-data
+function cdnvimdata() {
+    Set-Location $env:LOCALAPPDATA/nvim-data
 }
