@@ -78,7 +78,9 @@
   "code-runner.saveAllFilesBeforeRun": true,
   "code-runner.saveFileBeforeRun": true,
   "[lua]": {
-    "editor.defaultFormatter": "trixnz.vscode-lua"
+    "editor.defaultFormatter": "trixnz.vscode-lua",
+    "editor.tabSize": 4,
+    "editor.formatOnSave": true,
   },
   "[python]": {
     "editor.insertSpaces": true,
