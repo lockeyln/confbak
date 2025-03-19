@@ -145,8 +145,8 @@ inoremap <M-l> <Right>
 nnoremap L $
 nnoremap H ^
 " 向下5行和向上5行
-noremap <C-j> 5j
-noremap <C-k> 5k
+noremap <M-j> 5j
+noremap <M-k> 5k
 
 nmap <C-s> <action>(SaveAll)
 imap jk <Esc><action>(saveAll)
