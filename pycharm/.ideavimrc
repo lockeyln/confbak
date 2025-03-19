@@ -15,8 +15,12 @@ set showmode
 set so=0
 " 启用增量搜索
 set incsearch
+" 搜索时忽略大小写
+set ignorecase
 " 启用行号
 set nu
+" 返回normal模式时回到英文输入法状态
+set keep-english-in-normal
 
 """ Idea specific settings ------------------
 " 让 idea 的把两行加在一起的功能生效，smart join
@@ -123,3 +127,21 @@ vnoremap < <gv
 
 " 解决 visual 选中的情况下只能粘贴一次的问题
 vnoremap p P
+
+" insert模式下将jj映射为<Esc>
+imap jj <Esc>
+" insert模式下将移动光标映射为Alt+hjkl
+inoremap <M-h> <Left>
+inoremap <M-j> <Down>
+inoremap <M-k> <Up>
+inoremap <M-l> <Right>
+
+" 快速跳转行首和行尾
+nnoremap L $
+nnoremap H ^
+" 向下5行和向上5行
+noremap <C-j> 5j
+noremap <C-k> 5k
+
+nmap <C-s> <action>(SaveAll)
+imap jk <Esc><action>(saveAll)
