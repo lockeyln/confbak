@@ -127,6 +127,11 @@ vnoremap < <gv
 
 " 解决 visual 选中的情况下只能粘贴一次的问题
 vnoremap p P
+" -- 默认 dd 删除不保存到剪贴板
+nnoremap x "_x
+nnoremap X "_X
+nnoremap d "_d
+nnoremap D "_D
 
 " insert模式下将jj映射为<Esc>
 imap jj <Esc>
