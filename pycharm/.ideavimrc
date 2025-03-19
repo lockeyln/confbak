@@ -100,6 +100,8 @@ map <leader>o <action>(FileStructurePopup)
 " 将 ge 映射成鼠标悬浮在错误的地方上的时候显示错误提示
 map ge <Action>(ShowErrorDescription)
 " 将 gh 映射成鼠标悬浮在变量上方的时候显示文档
+
+
 map gh <Action>(QuickJavaDoc)
 
 " KJump 这里需要配合 KJump 插件来使用
@@ -109,11 +111,15 @@ nmap <leader><leader>b :action KJumpAction.Word0<cr>
 nmap <leader><leader>j :action KJumpAction.Line<cr>
 nmap <leader><leader>k :action KJumpAction.Line<cr>
 " KJump visual mode
-vmap <leader><leader>s :action KJumpAction<cr>
+vmap <leader><leader>s :action KJumpAction<cr>  
 vmap <leader><leader>w :action KJumpAction.Word0<cr>
 vmap <leader><leader>b :action KJumpAction.Word0<cr>
 vmap <leader><leader>j :action KJumpAction.Line<cr>
 vmap <leader><leader>k :action KJumpAction.Line<cr>
+
+" visual 模式下重复缩进
+vnoremap > >gv
+vnoremap < <gv
 
 " 解决 visual 选中的情况下只能粘贴一次的问题
 vnoremap p P
