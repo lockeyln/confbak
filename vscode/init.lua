@@ -73,9 +73,8 @@ keymap('n', '<Esc>', ':nohlsearch<CR>')
 -- vscode 专用设置
 if vim.g.vscode then
     -- VSCode extension
-    -- VSCode 下的 NeoVim  
-    -- 加载 VSCode 键位映射  
+    -- VSCode 下的 NeoVim 设置
 else
     -- ordinary Neovim
-    -- 普通的 Vim环境  
+    -- Nvim环境下的设置 
 end
