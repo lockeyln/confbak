@@ -1,1 +1,1 @@
-'scoop install neovim neovide git lazygit gcc ripgrep fd unzip tree-sitter luarocks '
+`scoop install neovim neovide git lazygit gcc ripgrep fd unzip tree-sitter luarocks `
