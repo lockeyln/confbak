@@ -17,7 +17,9 @@
   "files.eol": "\n",
   "workbench.colorTheme": "One Dark Pro Darker",
   "workbench.colorCustomizations": {
-    "editorRuler.foreground": "#ff4081"
+    "editorRuler.foreground": "#ff4081",
+    "editorCursor.foreground": "#FF0000",
+    "terminalCursor.foreground": "#FF0000"
   },
   "editor.fontFamily": "Fira Code,'Sarasa Fixed SC',monospace",
   "terminal.integrated.fontFamily": "Fira Code,'Sarasa Fixed SC',monospace",
@@ -114,4 +116,7 @@
   "vscode_custom_css.imports": [
     "file:///c:/Users/nrnr/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js"
   ],
+  "search.exclude": {
+    ".history/": true,
+  },
 }
