@@ -1,10 +1,3 @@
-;管理员运行
-if not A_IsAdmin
-{
-   Run *RunAs "%A_ScriptFullPath%" 
-   ExitApp
-}
- 
 ;无环境变量
 #NoEnv
 
