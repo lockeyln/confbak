@@ -1,8 +1,6 @@
 ;无环境变量
 #NoEnv
 
-#NoEnv
-
 SetCapsLockState, Alwaysoff
 SetStoreCapsLockMode, Off
 
