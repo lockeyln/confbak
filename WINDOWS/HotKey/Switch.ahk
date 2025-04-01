@@ -5,7 +5,7 @@ SetCapsLockState, Alwaysoff
 SetStoreCapsLockMode, Off
 
 CapsLock::
-KeyWait, CapsLock, T0.2
+KeyWait, CapsLock, T0.3
 If ErrorLevel {
   Send, {CapsLock}
   KeyWait, CapsLock
