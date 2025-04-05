@@ -7,6 +7,7 @@
   "diffEditor.wordWrap": "off",
   "editor.guides.indentation": false,
   "editor.guides.bracketPairs": false,
+  "editor.renderWhitespace": "all",
   "workbench.editorAssociations": {
     "*.copilotmd": "vscode.markdown.preview.editor",
     "{git,gitlens,git-graph}:/**/*.{md,csv,svg}": "default"
