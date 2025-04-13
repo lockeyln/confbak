@@ -16,7 +16,10 @@
   "files.autoGuessEncoding": true,
   // 默认LF结尾,在 Windows 中默认使用的是 CRLF（回车符和换行符）来换行，而在 Linux 和 macOS 中则使用的是 LF（换行符）。
   "files.eol": "\n",
-  "workbench.colorTheme": "One Dark Pro Darker",
+  "workbench.colorTheme": "Palenight (Mild Contrast)",
+  "workbench.iconTheme": "material-icon-theme",
+  "window.zoomLevel": 1,
+  "workbench.tree.indent": 20,
   "workbench.colorCustomizations": {
     "editorRuler.foreground": "#ff4081",
     "editorCursor.foreground": "#FF0000",
@@ -25,14 +28,14 @@
   "editor.fontFamily": "Fira Code,'Sarasa Fixed SC',monospace",
   "terminal.integrated.fontFamily": "Fira Code,'Sarasa Fixed SC',monospace",
   "editor.fontLigatures": true,
-  "editor.fontSize": 16,
+  "editor.fontSize": 14,
   "editor.fontWeight": "normal",
   "editor.wordWrap": "on",
   "editor.lineHeight": 1.5,
   "editor.lineNumbers": "relative",
   // "editor.rulers": [80],
   "editor.smoothScrolling": true,
-  "editor.cursorBlinking": "smooth",
+  "editor.cursorBlinking": "expand",
   "editor.cursorSmoothCaretAnimation": "on",
   "workbench.list.smoothScrolling": true,
   "editor.mouseWheelZoom": true,
@@ -125,130 +128,6 @@
   "search.exclude": {
     ".history/": true,
   },
-}{
-  "workbench.activityBar.location": "top",
-  "workbench.settings.applyToAllProfiles": [
-    "editor.fontFamily"
-  ],
-  "editor.inlayHints.enabled": "off",
-  "diffEditor.wordWrap": "off",
-  "editor.guides.indentation": false,
-  "editor.guides.bracketPairs": false,
-  "workbench.editorAssociations": {
-    "*.copilotmd": "vscode.markdown.preview.editor",
-    "{git,gitlens,git-graph}:/**/*.{md,csv,svg}": "default"
-  },
-  "files.autoSave": "afterDelay",
-  "files.autoGuessEncoding": true,
-  // 默认LF结尾,在 Windows 中默认使用的是 CRLF（回车符和换行符）来换行，而在 Linux 和 macOS 中则使用的是 LF（换行符）。
-  "files.eol": "\n",
-  "workbench.colorTheme": "One Dark Pro Darker",
-  "workbench.colorCustomizations": {
-    "editorRuler.foreground": "#ff4081",
-    "editorCursor.foreground": "#FF0000",
-    "terminalCursor.foreground": "#FF0000"
-  },
-  "editor.fontFamily": "Fira Code,'Sarasa Fixed SC',monospace",
-  "terminal.integrated.fontFamily": "Fira Code,'Sarasa Fixed SC',monospace",
-  "editor.fontLigatures": true,
-  "editor.fontSize": 16,
-  "editor.fontWeight": "normal",
-  "editor.wordWrap": "on",
-  "editor.lineHeight": 1.5,
-  "editor.lineNumbers": "relative",
-  // "editor.rulers": [80],
-  "editor.smoothScrolling": true,
-  "editor.cursorBlinking": "smooth",
-  "editor.cursorSmoothCaretAnimation": "on",
-  "workbench.list.smoothScrolling": true,
-  "editor.mouseWheelZoom": true,
-  "editor.bracketPairColorization.enabled": true,
-  "explorer.compactFolders": true,
-  "notebook.compactView": true,
-  "window.density.editorTabHeight": "compact",
-  "window.dialogStyle": "custom",
-  "debug.showBreakpointsInOverviewRuler": true,
-  "search.searchEditor.singleClickBehaviour": "peekDefinition",
-  "terminal.integrated.stickyScroll.enabled": true,
-  // code snippet
-  "editor.quickSuggestions": {
-    "comments": "off",
-    "strings": "off",
-    "other": "off"
-  },
-  "editor.parameterHints.enabled": false,
-  "editor.suggest.snippetsPreventQuickSuggestions": false,
-  "editor.acceptSuggestionOnEnter": "smart",
-  "editor.suggestSelection": "recentlyUsedByPrefix",
-  "editor.formatOnSave": true,
-  "editor.formatOnPaste": false,
-  "editor.formatOnType": true,
-  // neovim路径
-  "vscode-neovim.neovimExecutablePaths.win32": "D:\\Neovim\\bin\\nvim.exe",
-  // neovim配置文件路径
-  "vscode-neovim.neovimInitVimPaths.win32": "C:\\Users\\nrnr\\AppData\\Local\\nvim\\init.lua",
-  // neovim组合键
-  "vscode-neovim.compositeKeys": {
-    "jj": {
-      "command": "vscode-neovim.escape"
-    },
-    "jk": {
-      "command": "vscode-neovim.lua",
-      "args": [
-        [
-          "local code = require('vscode')",
-          "code.action('vscode-neovim.escape')",
-          "code.action('workbench.action.files.save')",
-        ],
-      ],
-    },
-  },
-  "extensions.experimental.affinity": {
-    "asvetliakov.vscode-neovim": 1
-  },
-  "code-runner.executorMap": {
-    "lua": "D:\\lua-5.4.2\\lua54.exe"
-  },
-  "code-runner.runInTerminal": true,
-  "code-runner.saveAllFilesBeforeRun": true,
-  "code-runner.saveFileBeforeRun": true,
-  "[lua]": {
-    "editor.defaultFormatter": "trixnz.vscode-lua",
-    "editor.tabSize": 4,
-    "editor.formatOnSave": true,
-  },
-  "[python]": {
-    "editor.insertSpaces": true,
-    "editor.tabSize": 4,
-    "files.autoGuessEncoding": true,
-    "editor.defaultFormatter": "charliermarsh.ruff",
-    "editor.formatOnSave": true,
-    "editor.codeActionsOnSave": {
-      "source.fixAll.ruff": "explicit",
-      "source.organizeImports.ruff": "explicit",
-    }
-  },
-  "python.autoComplete.extraPaths": [],
-  "python.analysis.completeFunctionParens": true,
-  "python.analysis.inlayHints.functionReturnTypes": true,
-  "python.analysis.typeCheckingMode": "standard",
-  "notebook.defaultFormatter": "charliermarsh.ruff",
-  "notebook.formatOnSave.enabled": true,
-  "notebook.codeActionsOnSave": {
-    "source.fixAll": "explicit",
-    "source.organizeImports": "explicit",
-  },
-  "[javascript]": {
-    "editor.tabSize": 2,
-    "editor.formatOnSave": true
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "vscode_custom_css.imports": [
-    "file:///c:/Users/nrnr/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js"
-  ],
-  "search.exclude": {
-    ".history/": true,
-  },
+  "vsicons.dontShowNewVersionMessage": true,
+  "redhat.telemetry.enabled": true,
 }
