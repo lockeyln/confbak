@@ -1,5 +1,4 @@
 {
-  "workbench.activityBar.location": "top",
   "workbench.settings.applyToAllProfiles": [
     "editor.fontFamily"
   ],
@@ -18,7 +17,7 @@
   "files.eol": "\n",
   "workbench.colorTheme": "Palenight (Mild Contrast)",
   "workbench.iconTheme": "material-icon-theme",
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 0.8,
   "workbench.tree.indent": 20,
   "workbench.colorCustomizations": {
     "editorRuler.foreground": "#ff4081",
@@ -128,6 +127,5 @@
   "search.exclude": {
     ".history/": true,
   },
-  "vsicons.dontShowNewVersionMessage": true,
   "redhat.telemetry.enabled": true,
 }
