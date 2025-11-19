@@ -83,7 +83,7 @@
     "asvetliakov.vscode-neovim": 1
   },
   "code-runner.executorMap": {
-    "lua": "D:\\lua-5.4.2\\lua54.exe"
+    "lua": "D:\\lua\\lua54.exe"
   },
   "code-runner.runInTerminal": true,
   "code-runner.saveAllFilesBeforeRun": true,
