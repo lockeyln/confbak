@@ -10,6 +10,13 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 # disable bell/beep sound
 Set-PSReadlineOption -BellStyle None
 
+# 设置控制台输出编码为 UTF-8
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+# 设置输入编码为 UTF-8
+[Console]::InputEncoding = [System.Text.Encoding]::UTF8
+# 设置 PowerShell 内部编码为 UTF-8
+$OutputEncoding = [System.Text.Encoding]::UTF8
+
 $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
 if (Test-Path($ChocolateyProfile)) {
     Import-Module "$ChocolateyProfile"
